@@ -6,20 +6,24 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      marginBottom: `0.2rem`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: 1000,
+        padding: `0.1rem 1rem`,
+        display: `flex`,
+        textAlign: `center`,
+        justifyContent: `space-between`,
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
+            padding: `1rem`,
             color: `white`,
             textDecoration: `none`,
           }}
@@ -27,6 +31,36 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <Link
+        to="/about"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+          padding: `1rem`,
+        }}
+      >
+        <h4>About</h4>
+      </Link>
+      <Link
+        to="/task"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+          padding: `1rem`,
+        }}
+      >
+        <h4>Tags</h4>
+      </Link>
+      <Link
+        to="/team"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+          padding: `1rem`,
+        }}
+      >
+        <h4>Teams</h4>
+      </Link>
     </div>
   </header>
 )

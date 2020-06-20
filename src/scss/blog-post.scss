@@ -1,6 +1,7 @@
 body {
   text-decoration: none;
   box-sizing: border-box;
+  background-color: rgba(220, 226, 226, 0.589);
 }
 a:hover,
 a:visited,
@@ -11,57 +12,62 @@ a:active {
 .row {
   display: flex;
   height: 100%;
-  // border: 1px solid #1425e6;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
   padding: 0.2rem;
   .col1 {
     padding: 0.2rem;
     flex: 8;
-    // border: 1px solid #14e61f;
     margin-right: 0.4rem;
   }
   .col2 {
+    margin-top: 1rem;
+
     padding: 0.2rem;
     flex: 4;
-    background-color: #cdceda9d;
-    // border: 1px solid #e61437;
+    background-color: #90919783;
     width: 90%;
-    height: 20rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
-    div {
-      flex: 1;
+    // align-items: flex-start;
+    // text-align: start;
+    justify-content: space-between;
+    .popular-blog {
       display: flex;
-      // border: 1 solid #dd0c24;
-      background-color: #ffffffed;
+      border: 1 solid #24dd0c;
+      background-color: #1013b8ed;
       margin: 0.2rem;
-      text-align: center;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
+      height: 10rem;
+
       h4 {
         color: gray;
         letter-spacing: 0.1rem;
       }
     }
+    .advert {
+      height: 13rem;
+      background-color: #9495a7ed;
+    }
   }
 }
 
 .blog-post-container {
-  width: 80%;
   margin: 1rem auto;
   padding: 3px;
+  border: 1 solid #dd0c24;
+
   border-radius: 0.5rem;
-  background-color: rgba(241, 220, 220, 0.596);
+  background-color: rgba(248, 251, 251, 0.938);
   text-decoration: none;
   position: relative;
   transition: all 0.5s ease-in-out;
   &:hover .readMore {
     display: block;
   }
-
+  Img {
+    width: 200px;
+    height: 200px;
+  }
   .post-title {
     display: flex;
     margin: 0.3rem;
@@ -71,6 +77,8 @@ a:active {
     h3 {
       margin: 0.3rem;
       color: #36384e;
+      text-transform: uppercase;
+      font-size: 1.1rem;
     }
     span {
       font-size: 0.8rem;

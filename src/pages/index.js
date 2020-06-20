@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import BlogTemplate from "../templates/blogTemplates.js"
@@ -12,26 +11,41 @@ const IndexPage = ({ data }) => {
   const { allMarkdownRemark } = data
 
   return (
-    <Layout>
+    <Layout style={{ height: "100%" }}>
       <SEO title="Home" />
-      <h1>Home</h1>
-      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div> */}
-      <ul style={{ listStyle: "none" }}>
-        {allMarkdownRemark.edges.map(post => (
-          <li key={post.node.id}>
-            <BlogTemplate
-              title={post.node.frontmatter.title}
-              path={post.node.frontmatter.slug}
-              date={post.node.frontmatter.date}
-              body={post.node.excerpt}
-              fluid={post.node.frontmatter.image.childImageSharp.fluid}
+
+      <div style={{ maxWidth: `300px`, marginBottom: `1rem`, margin: `auto` }}>
+        <h1>Home</h1>
+      </div>
+      <div className="row">
+        <div className="col1">
+          <ul style={{ listStyle: "none" }}>
+            {allMarkdownRemark.edges.map(post => (
+              <li key={post.node.id}>
+                <BlogTemplate
+                  title={post.node.frontmatter.title}
+                  path={post.node.frontmatter.slug}
+                  date={post.node.frontmatter.date}
+                  body={post.node.excerpt}
+                  fluid={post.node.frontmatter.image.childImageSharp.fluid}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="col2">
+          <div className="popular-blog">
+            {" "}
+            <img
+              src="https://via.placeholder.com/270x400/0000FF/FFFFFFF?Text=wondeshi.com"
+              alt="placeholder"
             />
-          </li>
-        ))}
-      </ul>
-      <Link to="/about/">Go to About</Link> <br />
-      <Link to="/task/">Go to Task</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+          </div>
+          <div className="advert">
+            <h4>Advertisement </h4>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -48,7 +62,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             image {
               childImageSharp {
-                fluid(maxWidth: 350, maxHeight: 200) {
+                fluid(maxWidth: 200, maxHeight: 150) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  height: 5rem;
+
+  width: 100%;
+  margin: 0rem 0.2rem;
+  background-color: rgb(240, 246, 246);
+  color: rgba(36, 21, 97, 0.644);
+  .address {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+  }
+  .copyRight {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 3;
+  }
+  a {
+    color: rgba(16, 18, 138, 0.431);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}

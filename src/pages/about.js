@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,8 +7,12 @@ const About = () => (
   <Layout>
     <SEO title="About" />
     <h1>About Page!</h1>
-    <p>Welcome to About page </p>
-    <Link to="/">Go Home</Link>
+    <p>
+      Welcome to About page Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Ullam vel debitis est tenetur excepturi nemo nihil doloribus fugiat,
+      earum exercitationem quo recusandae consectetur hic! Aspernatur ex sequi
+      praesentium facere provident.
+    </p>
   </Layout>
 )
 

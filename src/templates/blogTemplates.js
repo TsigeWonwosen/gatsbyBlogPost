@@ -18,7 +18,7 @@ export default function Template({ title, date, body, fluid, path }) {
             <h3>{title}</h3>
             <span>{date}</span>
           </div>
-          <p>{body}</p>
+          {body && <p>{body}</p>}
           <Link to={path} className="readMore">
             Read More
           </Link>

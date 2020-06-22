@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,8 +7,11 @@ const Teams = () => (
   <Layout>
     <SEO title="Teams" />
     <h1>Teams Page!</h1>
-    <p>Welcome to Teams page </p>
-    <Link to="/">Go Home</Link>
+    <p>
+      Welcome to Teams Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Laudantium, debitis minus veritatis voluptate suscipit incidunt repellat
+      impedit, nostrum consectetur at ipsum est aperiam sequi itaque?
+    </p>
   </Layout>
 )
 

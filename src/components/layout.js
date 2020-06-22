@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           position: `relative`,
         }}
       >
-        <main>{children}</main>
+        <main style={{ minHeight: 400 }}>{children}</main>
       </div>
       <Footer />
     </>

@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,8 +6,11 @@ const Tags = () => (
   <Layout>
     <SEO title="Tags" />
     <h1>Tags Page!</h1>
-    <p>Welcome to Tags page </p>
-    <Link to="/">Go Home</Link>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+      cupiditate at animi cumque ea fuga, dolores maiores, quam magnam provident
+      harum aperiam nam possimus.
+    </p>
   </Layout>
 )
 

@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 export default function Template({ title, date, body, fluid, slug }) {
   return (
     <div className="blog-post-container">
-      <Link to={`${slug}`}>
+      <Link to={`/posts/${slug}`}>
         <div className="blog-post">
           <Img
             fluid={fluid}
@@ -19,7 +19,7 @@ export default function Template({ title, date, body, fluid, slug }) {
             <span>{date}</span>
           </div>
           {body && <p>{body}</p>}
-          <Link to={`${slug}`} className="readMore">
+          <Link to={`/posts/${slug}`} className="readMore">
             Read More
           </Link>
         </div>

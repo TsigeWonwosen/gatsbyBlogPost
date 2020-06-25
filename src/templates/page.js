@@ -41,7 +41,7 @@ const PageTemplate = ({ data }) => {
             </article>
             <article>
               <div
-                className="blog-post-container"
+                className="blog-container"
                 dangerouslySetInnerHTML={{ __html: html }}
               />
             </article>

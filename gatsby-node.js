@@ -19,7 +19,6 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
-  console.log("Result:" + JSON.stringify(result))
 
   // Handle errors
   if (result.errors) {

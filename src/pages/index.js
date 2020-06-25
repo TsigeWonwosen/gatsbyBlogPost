@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
     <Layout style={{ height: "100%" }}>
       <SEO title="Home" />
 
-      <div style={{ maxWidth: `300px`, marginBottom: `1rem`, margin: `auto` }}>
+      <div style={{ maxWidth: `300px`, marginBottom: `6rem`, margin: `auto` }}>
         <h2>Home</h2>
       </div>
       <div className="row">

@@ -1,13 +1,16 @@
+$colorFooter: rgba(223, 220, 231, 0.808);
+
 .footer {
   display: flex;
   flex-direction: row;
   padding: 1rem;
-  height: 5rem;
+  height: 4rem;
 
-  width: 100%;
+  width: 98.2vw;
   margin: 0rem 0.2rem;
-  background-color: rgb(240, 246, 246);
-  color: rgba(36, 21, 97, 0.644);
+  background-color: rgba(3, 27, 34, 0.808);
+  color: $colorFooter;
+
   .address {
     flex: 2;
     display: flex;
@@ -22,7 +25,7 @@
     flex: 3;
   }
   a {
-    color: rgba(16, 18, 138, 0.431);
+    color: $colorFooter;
     font-size: 1.1rem;
     font-weight: 500;
   }

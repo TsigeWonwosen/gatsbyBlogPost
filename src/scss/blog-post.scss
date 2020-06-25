@@ -138,3 +138,21 @@ a:active {
     }
   }
 }
+
+.navBar {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.2rem 1.5rem;
+    max-height: 1.4rem;
+  }
+}
+.active-link h5 {
+  color: #eee9e5ef;
+  font-size: 1.04rem;
+}

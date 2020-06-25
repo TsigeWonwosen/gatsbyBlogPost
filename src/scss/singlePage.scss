@@ -1,3 +1,6 @@
+$borderRadius: 0.2rem;
+$headerColor: rgba(42, 60, 163, 0.534);
+
 .title-singlePage {
   display: flex;
   flex-direction: column;
@@ -14,7 +17,7 @@
     span {
       //   border: 1px solid rgba(177, 51, 177, 0.2);
       margin-right: 0.7rem;
-      color: gray;
+      color: #999999;
       font-size: 0.8rem;
       font-weight: 400;
       text-transform: uppercase;
@@ -24,7 +27,7 @@
     width: auto;
     margin-bottom: 0;
     font-size: 1.6rem;
-    color: rgba(0, 0, 0, 0.602);
+    color: $headerColor;
   }
 }
 .blog-container {
@@ -45,18 +48,19 @@
     text-align: center;
     margin: 0 auto;
     padding: 0.2rem;
-    color: #0808509b;
+    color: $headerColor;
     height: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
   }
   p {
+    margin-top: 1rem;
     justify-content: start;
     text-align: start;
   }
 }
 Img {
-  border-radius: 0.5rem;
+  border-radius: $borderRadius;
 }
 .sideBare-title {
   padding: 0.2rem;
@@ -65,7 +69,7 @@ Img {
   h3 {
     font-size: 1.2rem;
     margin: 0.2rem auto 0.2rem;
-    color: #3b6ac0c0;
+    color: $headerColor;
   }
   span {
     color: #89aae6ca;

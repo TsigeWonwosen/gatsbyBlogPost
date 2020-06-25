@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
   const { allMarkdownRemark } = data
 
   return (
-    <Layout style={{ height: "100%" }}>
+    <Layout style={{ minHeight: "100vh" }}>
       <SEO title="Home" />
 
       <div style={{ maxWidth: `300px`, marginBottom: `6rem`, margin: `auto` }}>

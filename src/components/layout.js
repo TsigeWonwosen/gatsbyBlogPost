@@ -26,20 +26,30 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `1rem auto`,
-          maxWidth: 1000,
-          padding: `0 1rem 0.2rem`,
-          position: `relative`,
-        }}
-      >
-        <main style={{ minHeight: 300 }}>{children}</main>
+    <div
+      style={{
+        minHeight: "98vh",
+        display: "flex",
+        flexDirection: "column",
+        width: "98.43vw",
+        margin: "auto",
+      }}
+    >
+      <div style={{ flexGrow: "1" }}>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div
+          style={{
+            margin: `1rem auto`,
+            maxWidth: 1000,
+            padding: `0 1rem 0.2rem`,
+            position: `relative`,
+          }}
+        >
+          <main>{children}</main>
+        </div>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

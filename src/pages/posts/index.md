@@ -1,9 +1,9 @@
 ---
-slug: "/task"
 date: "2019-05-04"
 author: "wonde shi"
 title: "My first blog post"
 image: "../../images/silver-imac.jpg"
+slug: "my-first-blog-post"
 ---
 
 Welcome To First Blog Post

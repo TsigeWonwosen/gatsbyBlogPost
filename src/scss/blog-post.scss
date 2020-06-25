@@ -93,6 +93,10 @@ a:active {
     border-radius: 0.4rem;
     overflow: hidden;
     outline: none;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
   }
   .post-title {
     display: flex;

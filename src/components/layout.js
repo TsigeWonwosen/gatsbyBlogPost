@@ -30,13 +30,13 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
+          margin: `1rem auto`,
           maxWidth: 1000,
           padding: `0 1rem 0.2rem`,
           position: `relative`,
         }}
       >
-        <main style={{ minHeight: 400 }}>{children}</main>
+        <main style={{ minHeight: 300 }}>{children}</main>
       </div>
       <Footer />
     </>

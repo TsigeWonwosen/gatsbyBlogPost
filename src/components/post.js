@@ -3,10 +3,10 @@ import "../scss/blog-post.scss"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-export default function Template({ title, date, body, fluid, path }) {
+export default function Template({ title, date, body, fluid, slug }) {
   return (
     <div className="blog-post-container">
-      <Link to={path}>
+      <Link to={`${slug}`}>
         <div className="blog-post">
           <Img
             fluid={fluid}
@@ -19,7 +19,7 @@ export default function Template({ title, date, body, fluid, path }) {
             <span>{date}</span>
           </div>
           {body && <p>{body}</p>}
-          <Link to={path} className="readMore">
+          <Link to={`${slug}`} className="readMore">
             Read More
           </Link>
         </div>

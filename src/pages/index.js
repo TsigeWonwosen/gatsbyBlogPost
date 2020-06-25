@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SideBar from "../components/sideBar"
 import SEO from "../components/seo"
-import BlogTemplate from "../templates/blogTemplates.js"
+import Post from "../components/post.js"
 
 const IndexPage = ({ data }) => {
   const { allMarkdownRemark } = data
@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
 
       <div style={{ maxWidth: `300px`, marginBottom: `1rem`, margin: `auto` }}>
-        <h1>Home</h1>
+        <h2>Home</h2>
       </div>
       <div className="row">
         <div className="col1">
@@ -35,11 +35,11 @@ const IndexPage = ({ data }) => {
                 },
               }) => (
                 <li key={id}>
-                  <BlogTemplate
+                  <Post
                     title={title}
-                    path={slug}
                     date={date}
                     body={excerpt}
+                    slug={slug}
                     fluid={fluid}
                   />
                 </li>
@@ -78,6 +78,7 @@ export const pageQuery = graphql`
               }
             }
           }
+
           excerpt
         }
       }

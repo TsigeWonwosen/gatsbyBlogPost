@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import BlogTemplate from "../templates/blogTemplates.js"
+import Post from "./post.js"
 
 const SideBar = () => {
   const {
@@ -25,8 +25,8 @@ const SideBar = () => {
               id,
               frontmatter: {
                 title,
-                slug,
                 date,
+                slug,
                 image: {
                   childImageSharp: { fluid },
                 },
@@ -34,12 +34,7 @@ const SideBar = () => {
             },
           }) => (
             <li key={id}>
-              <BlogTemplate
-                title={title}
-                path={slug}
-                date={date}
-                fluid={fluid}
-              />
+              <Post title={title} date={date} fluid={fluid} slug={slug} />
             </li>
           )
         )}

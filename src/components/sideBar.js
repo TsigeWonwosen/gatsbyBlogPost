@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Post from "./post.js"
+import Post from "./sideBarSinglePost"
 
 const SideBar = () => {
   const {

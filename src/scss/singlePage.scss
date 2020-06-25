@@ -58,3 +58,17 @@
 Img {
   border-radius: 0.5rem;
 }
+.sideBare-title {
+  padding: 0.2rem;
+  //   border: 1px solid #f4f3;
+
+  h3 {
+    font-size: 1.2rem;
+    margin: 0.2rem auto 0.2rem;
+    color: #3b6ac0c0;
+  }
+  span {
+    color: #89aae6ca;
+    font-size: 0.9rem;
+  }
+}

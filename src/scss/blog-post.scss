@@ -1,13 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap');
+
 body {
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  background-color: rgba(220, 226, 226, 0.575);
-}
+  background-color: rgba(232, 238, 238, 0.575);
+  overflow-x: hidden;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 a:hover,
 a:visited,
 a:link,
 a:active {
   text-decoration: none;
+}
+h1,h2,h3,h4{
+  color: #0d0d0e7e;
+  font-weight: 500;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 76vh;
+  padding: 1.2rem;
+  p{
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: #0c0c0c85;
+  }
 }
 .row {
   display: flex;
@@ -47,7 +70,7 @@ a:active {
         margin: auto;
       }
       h4 {
-        color: #a81a9c93;
+        color: #a81a9c4b;
         font-size: 1.1rem;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
@@ -77,7 +100,7 @@ a:active {
 .blog-post-container {
   margin: 1rem auto;
   padding: 0.5rem 0.4rem 1.8rem;
-  border: 1 solid #dd0c24;
+  border: 2 solid #dd0c24;
 
   border-radius: 0.5rem;
   background-color: rgba(248, 251, 251, 0.938);
@@ -114,7 +137,8 @@ a:active {
       font-size: 0.8rem;
       color: gray;
       margin: 0.3rem 0.4rem;
-      text-transform: uppercase;
+      // text-transform: uppercase;
+      font-style: italic;
     }
   }
   p {
@@ -134,25 +158,32 @@ a:active {
     padding: 0.1rem 0.2rem;
     &:hove {
       background-color: rgba(115, 48, 179, 0.548);
-      color: rgb(255, 248, 248);
+      color: rgba(255, 248, 248, 0.616);
     }
   }
 }
 
 .navBar {
+  height: 100%;
   width: 40%;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+
   .nav-link {
-    color: white;
+    color: rgba(230, 222, 222, 0.801);
     text-decoration: none;
-    padding: 0.2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 0.9rem;
     max-height: 1.4rem;
   }
+  .active-link  {
+    color: #f8f5f2;
+    font-size: 1rem;
+  }
 }
-.active-link h5 {
-  color: #eee9e5ef;
-  font-size: 1.04rem;
 }

@@ -31,8 +31,9 @@ const Layout = ({ children }) => {
         minHeight: "98vh",
         display: "flex",
         flexDirection: "column",
-        width: "98.43vw",
+        width: "100vw",
         margin: "auto",
+        overflowX:"hidden"
       }}
     >
       <div style={{ flexGrow: "1" }}>

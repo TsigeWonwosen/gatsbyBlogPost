@@ -1,32 +1,32 @@
-$colorFooter: rgba(223, 220, 231, 0.808);
+$colorFooter: rgba(229, 227, 231, 0.808);
 
 .footer {
   display: flex;
-  flex-direction: row;
-  padding: 1rem;
-  height: 4rem;
-
-  width: 98.2vw;
-  margin: 0rem 0.2rem;
-  background-color: rgba(3, 27, 34, 0.808);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0rem 12rem;
+  height: 3rem;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: rgba(18, 21, 22, 0.733);
   color: $colorFooter;
 
   .address {
-    flex: 2;
+    flex: 4;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
+    margin-right: 1rem;
   }
   .copyRight {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex: 3;
+    flex: 6;
   }
   a {
     color: $colorFooter;
-    font-size: 1.1rem;
-    font-weight: 500;
   }
 }

@@ -24,9 +24,9 @@ const PageTemplate = ({ data }) => {
       <div className="row">
         <div className="col1">
           <div className="title-singlePage">
-            <h3>Single Post : {title}</h3>
+            <h3>{title}</h3>
             <div className="blog-author">
-              <span>By - {author}</span>
+              <span>{author}</span>
               <span>{date}</span>
             </div>
           </div>
@@ -62,11 +62,11 @@ const PageTemplate = ({ data }) => {
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        slug
+        date(formatString: "MMM DD, YYYY")
         title
         author
         image {

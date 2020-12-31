@@ -23,33 +23,33 @@ const Header = ({ siteTitle }) => (
         justifyContent: `space-between`,
       }}
     >
-      <h4 style={{ margin: 0, height: `100%` }}>
         <Link
           to="/"
           style={{
-            padding: `1rem`,
-            color: `#F4F4FE`,
+            color: `#F4F4F4`,
             textDecoration: `none`,
             display: `flex`,
-            textAlign: `center`,
-            alignItems: `center`,
             justifyContent: `center`,
+            alignItems: `center`,
+            height:"100%",
             maxHeight: `40%`,
+            fontSize:"1.08rem",
+            fontFamily:"bold"
           }}
         >
           {siteTitle}
         </Link>
-      </h4>
+     
 
       <div className="navBar">
         <Link to="/about" className="nav-link" activeClassName="active-link">
-          <h5>About</h5>
+          About
         </Link>
         <Link to="/task" activeClassName="active-link" className="nav-link">
-          <h5>Tags</h5>
+          Tags
         </Link>
         <Link to="/team" className="nav-link" activeClassName="active-link">
-          <h5>Teams</h5>
+          Teams
         </Link>
       </div>
     </div>

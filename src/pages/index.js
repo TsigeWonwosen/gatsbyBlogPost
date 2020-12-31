@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
     <Layout style={{ minHeight: "100vh" }}>
       <SEO title="Home" />
 
-      <div style={{ maxWidth: `300px`, marginBottom: `6rem`, margin: `auto` }}>
+      <div style={{ maxWidth: `300px`, marginBottom: `2rem`, margin: `auto` }}>
         <h2>Home</h2>
       </div>
       <div className="row">
@@ -24,9 +24,9 @@ const IndexPage = ({ data }) => {
                 node: {
                   excerpt,
                   id,
+                  fields: { slug },
                   frontmatter: {
                     title,
-                    slug,
                     date,
                     image: {
                       childImageSharp: { fluid },
@@ -68,8 +68,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            slug
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM Do, YYYY")
             image {
               childImageSharp {
                 fluid(maxWidth: 200, maxHeight: 150) {
@@ -78,7 +77,9 @@ export const pageQuery = graphql`
               }
             }
           }
-
+          fields {
+            slug
+          }
           excerpt
         }
       }

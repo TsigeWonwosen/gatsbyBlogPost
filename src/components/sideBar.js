@@ -23,10 +23,10 @@ const SideBar = () => {
           ({
             node: {
               id,
+              fields: { slug },
               frontmatter: {
                 title,
                 date,
-                slug,
                 image: {
                   childImageSharp: { fluid },
                 },
@@ -54,10 +54,13 @@ export const sideBarQuery = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
-            slug
-            date(formatString: "MMMM DD, YYYY")
+            # slug
+            date(formatString: "MMM DD, YYYY")
             image {
               childImageSharp {
                 fluid {

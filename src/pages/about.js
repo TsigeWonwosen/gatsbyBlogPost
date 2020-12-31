@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 const About = () => (
   <Layout>
     <SEO title="About" />
+    <div className ='main-container'>
     <h1>About Page!</h1>
     <p>
       Welcome to About page Lorem ipsum dolor sit amet consectetur adipisicing
@@ -13,6 +14,8 @@ const About = () => (
       earum exercitationem quo recusandae consectetur hic! Aspernatur ex sequi
       praesentium facere provident.
     </p>
+    </div>
+    
   </Layout>
 )
 

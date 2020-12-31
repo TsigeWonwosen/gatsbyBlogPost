@@ -1,5 +1,5 @@
 $borderRadius: 0.2rem;
-$headerColor: rgba(42, 60, 163, 0.534);
+$headerColor: rgba(96, 26, 161, 0.534);
 
 .title-singlePage {
   display: flex;
@@ -7,7 +7,6 @@ $headerColor: rgba(42, 60, 163, 0.534);
   padding: 0.6rem;
   justify-content: flex-start;
   align-items: flex-start;
-  //   border: 1px solid #f3f3;
   .blog-author {
     margin-top: 0.2rem;
     display: flex;
@@ -15,18 +14,17 @@ $headerColor: rgba(42, 60, 163, 0.534);
     align-items: flex-start;
 
     span {
-      //   border: 1px solid rgba(177, 51, 177, 0.2);
-      margin-right: 0.7rem;
+      margin-right: 0.8rem;
       color: #999999;
       font-size: 0.8rem;
       font-weight: 400;
-      text-transform: uppercase;
+      font-style: italic;
     }
   }
   h3 {
     width: auto;
     margin-bottom: 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: $headerColor;
   }
 }
@@ -64,15 +62,15 @@ Img {
 }
 .sideBare-title {
   padding: 0.2rem;
-  //   border: 1px solid #f4f3;
 
   h3 {
-    font-size: 1.2rem;
-    margin: 0.2rem auto 0.2rem;
+    font-size: 1rem;
+    margin: 0.2rem auto 0.1rem;
     color: $headerColor;
   }
   span {
     color: #89aae6ca;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-style: italic;
   }
 }

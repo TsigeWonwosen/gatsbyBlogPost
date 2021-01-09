@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <div
       style={{
-        minHeight: "98vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         width: "100vw",
@@ -36,19 +36,20 @@ const Layout = ({ children }) => {
         overflowX:"hidden"
       }}
     >
-      <div style={{ flexGrow: "1" }}>
+      <div>
         <Header siteTitle={data.site.siteMetadata.title} />
+       </div>
         <div
           style={{
+            flexGrow: "1",
             margin: `1rem auto`,
             maxWidth: 1000,
-            padding: `0 1rem 0.2rem`,
-            position: `relative`,
+           
           }}
         >
           <main>{children}</main>
         </div>
-      </div>
+    
       <Footer />
     </div>
   )

@@ -1,0 +1,241 @@
+.hero {
+  width: 100%;
+  height: calc(100vh - 110px);
+  z-index: 1;
+  object-fit: cover;
+}
+
+.hero-image {
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transform: 0.6s ease-in-out;
+}
+.hero::before {
+  z-index: 1;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(7, 35, 87, 0.774),
+    rgba(79, 79, 231, 0.137)
+  );
+}
+.contact-btn {
+  text-transform: uppercase;
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-9);
+  padding: 0.375rem 0.7rem;
+  letter-spacing: var(--spacing);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 700;
+  width: 90%;
+  max-width: 210px;
+  margin: 0.3rem 1.2rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.hero-btn-container {
+  position: absolute;
+  bottom: 50px;
+  left: 48%;
+  display: flex;
+  z-index: 40;
+  object-position: 50% 50%;
+
+  .hero-btn {
+    box-sizing: border-box;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+    z-index: 40;
+  }
+  .active {
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+  }
+}
+
+.btn-arrow {
+  margin-left: 10px;
+  font-size: 26px;
+  color: #e9e1e1;
+  z-index: 40;
+}
+
+.hero-rightArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: #ffffff;
+  font-size: 29px;
+  font-weight: bold;
+  background-color: #ffffff79;
+  padding: 10px;
+  border-radius: 50%;
+  outline: none;
+  z-index: 21;
+}
+
+.hero-leftArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #ffffff;
+  font-size: 29px;
+  font-weight: bold;
+  background-color: #ffffff79;
+  padding: 10px;
+  border-radius: 50%;
+  outline: none;
+  transition: all 0.4s ease-in;
+  z-index: 21;
+}
+
+.hero-leftArrow:hover,
+.hero-rightArrow:hover {
+  background-color: #ffffffab;
+  cursor: pointer;
+}
+
+.hero-header {
+  position: absolute;
+  top: 34%;
+  left: 13%;
+  z-index: 20;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  h1 {
+    color: #ffffffab;
+    font-weight: 600;
+    margin: 0;
+    padding: 0px 1rem;
+  }
+}
+li,
+a {
+  list-style: none;
+}
+.btn {
+  margin: 0px 1rem;
+}
+.hero-downArrow {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  left: 49%;
+  bottom: 43%;
+  font-size: clamp(2rem, 2.5vw, 44px);
+  z-index: 23;
+  a {
+    // cursor: pointer;
+    margin: 0;
+  }
+  svg {
+    color: #ffffff59;
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    width: 100%;
+    height: 400px;
+    position: 50% 100%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-image {
+    object-position: 50% 50%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6;
+  }
+  .contact-btn {
+    margin-top: 0;
+    width: 70%;
+  }
+  .hero-btn-container {
+    bottom: 30px;
+
+    .hero-btn {
+      width: 14px;
+      height: 14px;
+      margin-right: 12px;
+    }
+  }
+
+  .hero-rightArrow {
+    top: 50%;
+    right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ffffff79;
+    padding: 10px;
+  }
+
+  .hero-leftArrow {
+    top: 50%;
+    left: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ffffff79;
+    padding: 10px;
+  }
+
+  .hero-header {
+    top: 33%;
+    left: 13%;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: flex-start;
+
+    h1 {
+      color: #ffffffd2;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    margin: 0px 1rem;
+    font-size: 10px;
+  }
+}

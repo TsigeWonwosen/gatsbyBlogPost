@@ -5,6 +5,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages/posts` })
+    console.log(slug)
     createNodeField({
       node,
       name: `slug`,
@@ -21,12 +22,13 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(`
     query GetPost {
       allMarkdownRemark {
-        edges {
+        edges{
           node {
             fields {
               slug
             }
-          }
+        }
+          
         }
       }
     }
@@ -44,7 +46,7 @@ exports.createPages = async ({ actions, graphql }) => {
       component: blogTemplate,
       context: {
         // additional data can be passed via context
-        slug: node.fields.slug,
+      slug: node.fields.slug,
       },
     })
   })

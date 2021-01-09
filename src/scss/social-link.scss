@@ -1,0 +1,22 @@
+/* social links */
+.social-links {
+  margin-top: 2rem;
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+.social-link {
+  font-size: 1.75rem;
+  color: var(--clr-grey-1);
+  transition: var(--transition);
+}
+.social-link:hover {
+  color: var(--clr-primary-5);
+}
+
+.footer .social-link {
+  color: var(--clr-white);
+}
+.footer .social-link:hover {
+  color: var(--clr-primary-5);
+}

@@ -1,189 +1,242 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap');
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgba(232, 238, 238, 0.575);
+  background-color: rgba(227, 231, 231, 0.747);
   overflow-x: hidden;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-a:hover,
-a:visited,
-a:link,
-a:active {
-  text-decoration: none;
-}
-h1,h2,h3,h4{
-  color: #0d0d0e7e;
-  font-weight: 500;
-}
-.main-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 76vh;
-  padding: 1.2rem;
-  p{
-    text-align: left;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-    color: #0c0c0c85;
+  font-family: "Roboto", sans-serif;
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
   }
-}
-.row {
-  display: flex;
-  height: 100%;
-
-  padding: 0.2rem;
-  .col1 {
-    padding: 0.2rem;
-    flex: 8;
-    margin-right: 0.4rem;
-  }
-  .col2 {
-    margin-top: 1.3rem;
-    flex: 4;
-    background-color: #e3e6ec;
-    width: 99%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 0.4rem;
-
-    .popular-blog {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      height: 90%;
-      .side-bar {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-self: flex-end;
-        margin: auto;
-      }
-      h4 {
-        color: #a81a9c4b;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
-        margin-bottom: 0.2rem;
-        margin-top: 0.5rem;
-      }
-    }
-    .advert {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      height: 15rem;
-      width: 90%;
-      margin: 0rem auto 0.5rem;
-      border-radius: 0.4rem;
-      background-color: hsla(255, 13%, 76%, 0.52);
-      text-align: center;
-      h4 {
-        width: 90%;
-        color: gray;
-        letter-spacing: 0.2rem;
-      }
-    }
-  }
-}
-
-.blog-post-container {
-  margin: 1rem auto;
-  padding: 0.5rem 0.4rem 1.8rem;
-  border: 2 solid #dd0c24;
-
-  border-radius: 0.5rem;
-  background-color: rgba(248, 251, 251, 0.938);
-  text-decoration: none;
-  position: relative;
-  transition: all 0.5s ease-in-out;
-  width: 95%;
-  height: 20%;
-  &:hover .readMore {
-    display: block;
-  }
-  Img {
-    border-radius: 0.4rem;
-    overflow: hidden;
-    outline: none;
-    opacity: 0.5;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .post-title {
-    display: flex;
-    margin: 0.3rem;
-    text-align: center;
-    justify-content: center;
-
-    h3 {
-      margin: 0.3rem;
-      color: #36384e;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-    }
-    span {
-      font-size: 0.8rem;
-      color: gray;
-      margin: 0.3rem 0.4rem;
-      // text-transform: uppercase;
-      font-style: italic;
-    }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #1a17179d;
+    font-weight: 400;
+    text-transform: uppercase;
+    // margin: 0;
+    padding: 0;
   }
   p {
-    color: #01020aef;
-    padding: 0.3rem;
+    text-align: left;
+    font-size: 0.92rem;
+    line-height: 1.5rem;
+    color: #0c0c0c77;
   }
-  ul li {
-    list-style: none;
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: "1000px";
+    min-height: "76vh";
+    padding: 1rem 0;
+    margin: 1rem auto;
+  }
+  .home-title-1 {
+    max-width: 200px;
+    margin: 2rem auto 1rem;
+    position: relative;
+  }
+
+  .row {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    .col1 {
+      flex: 9;
+      margin-right: 1rem;
+      background-color: #f9f9fa;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    .col2 {
+      flex: 3;
+      background-color: #f9f9fa;
+      padding-top: 2rem;
+      padding-left: auto;
+      padding-right: auto;
+      padding-bottom: 1rem;
+      width: 100%;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      border-radius: 10px;
+
+      .popular-blog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 90%;
+        .side-bar {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-self: flex-end;
+          margin: auto;
+        }
+        h4 {
+          font-size: 1.1rem;
+          letter-spacing: 0.1rem;
+          margin-bottom: 0.2rem;
+          margin-top: 0.5rem;
+        }
+      }
+      .advert {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 12rem;
+        width: 90%;
+        margin: 0rem auto;
+        border-radius: 10px;
+        background-color: hsla(255, 13%, 76%, 0.52);
+        text-align: center;
+        h4 {
+          font-size: 16px;
+          text-align: center;
+          width: 90%;
+          color: gray;
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+  }
+
+  .blog-post-container {
+    margin: 1rem auto;
+    padding: 0.5rem 0.4rem 1.8rem;
+    border-radius: 0.5rem;
+    background-color: rgba(248, 251, 251, 0.938);
     text-decoration: none;
-  }
-  .readMore {
-    border: 1px solid #525dd3b9;
-    position: absolute;
-    right: 9px;
-    bottom: 6px;
-    display: none;
-    padding: 0.1rem 0.2rem;
-    &:hove {
-      background-color: rgba(115, 48, 179, 0.548);
-      color: rgba(255, 248, 248, 0.616);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    width: 95%;
+    height: 20%;
+    &:hover .readMore {
+      display: block;
+    }
+    img {
+      border-radius: 0.4rem;
+      overflow: hidden;
+      outline: none;
+      opacity: 0.8 !important;
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+    .post-title {
+      height: 2rem;
+      display: flex;
+      margin: 0.5rem 0;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        max-width: 50%;
+      }
+      span {
+        font-size: 0.8rem;
+        color: gray;
+      }
+    }
+
+    ul li {
+      list-style: none;
+      text-decoration: none;
+    }
+    .readMore {
+      border: 1px solid #6b6f9bb9;
+      color: #6b6f9bb9;
+      border-radius: 50px;
+      position: absolute;
+      display: none;
+      right: 9px;
+      bottom: 6px;
+      padding: 0.1rem 0.5rem;
+      &:hove {
+        background-color: rgba(115, 48, 179, 0.548);
+        color: rgba(255, 248, 248, 0.616);
+      }
     }
   }
 }
 
-.navBar {
-  height: 100%;
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-
-  .nav-link {
-    color: rgba(230, 222, 222, 0.801);
-    text-decoration: none;
+@media screen and (max-width: 892px) {
+  .home-title-1 {
+    margin: 3rem auto 1rem !important;
+    position: relative;
+  }
+  h2 {
+    margin: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .row {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    font-size: 0.9rem;
-    max-height: 1.4rem;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    .col1 {
+      margin: 1px auto important;
+      width: 100%;
+      ul {
+        margin: 0 auto;
+      }
+    }
+    .col2 {
+      display: none !important;
+    }
   }
-  .active-link  {
-    color: #f8f5f2;
-    font-size: 1rem;
+
+  .blog-post-container {
+    margin: 1rem auto;
+    padding: 0.5rem 0.4rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in-out;
+    width: 90%;
+    height: 20%;
+    &:hover .readMore {
+      display: block;
+    }
+
+    .post-title {
+      height: 2rem;
+      display: flex;
+      margin: 0;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        margin: 0;
+        font-size: 0.8rem !important;
+        max-width: 80% !important;
+        font-weight: 500;
+      }
+      span {
+        font-size: 0.6rem !important;
+        color: gray;
+      }
+    }
   }
-}
 }

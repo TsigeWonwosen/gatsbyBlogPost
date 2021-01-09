@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Post from "./sideBarSinglePost"
-
+import "../scss/social-link.scss"
 const SideBar = () => {
   const {
     allMarkdownRemark: { edges },
@@ -44,10 +44,12 @@ const SideBar = () => {
 }
 
 export default SideBar
+// allMarkdownRemark(filter: {frontmatter: {published: {eq: true}}}, sort: {order: DESC}) {
 
 export const sideBarQuery = graphql`
   query SideQuery {
     allMarkdownRemark(
+      filter: { frontmatter: { published: { eq: true } } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 2
     ) {
@@ -59,7 +61,6 @@ export const sideBarQuery = graphql`
           }
           frontmatter {
             title
-            # slug
             date(formatString: "MMM DD, YYYY")
             image {
               childImageSharp {

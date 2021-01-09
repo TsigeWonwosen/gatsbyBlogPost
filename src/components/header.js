@@ -1,45 +1,25 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "../scss/blog-post.scss"
+import "../scss/navbar.scss"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `linear-gradient(90deg, rgba(50,60,200,1) 0%,rgba(200,90,110,0.7) 50%, rgba(60,150,200,0.5) 100%`,
-      marginBottom: `0.2rem`,
-      height: "50px",
-    }}
-  >
+  <header className="header-container">
     <div
+      className="hea"
       style={{
         margin: `0 auto`,
-        maxWidth: 1000,
-        padding: `0.1rem 1rem`,
-        display: `flex`,
+        maxWidth: "1000px",
         height: `100%`,
+        display: `flex`,
         textAlign: `center`,
         alignItems: "center",
         justifyContent: `space-between`,
       }}
     >
-        <Link
-          to="/"
-          style={{
-            color: `#F4F4F4`,
-            textDecoration: `none`,
-            display: `flex`,
-            justifyContent: `center`,
-            alignItems: `center`,
-            height:"100%",
-            maxHeight: `40%`,
-            fontSize:"1.08rem",
-            fontFamily:"bold"
-          }}
-        >
-          {siteTitle}
-        </Link>
-     
+      <Link to="/" className="logo">
+        {siteTitle.substring(0, 6).toUpperCase()}
+      </Link>
 
       <div className="navBar">
         <Link to="/about" className="nav-link" activeClassName="active-link">
@@ -50,6 +30,13 @@ const Header = ({ siteTitle }) => (
         </Link>
         <Link to="/team" className="nav-link" activeClassName="active-link">
           Teams
+        </Link>
+        <Link
+          to="/contact"
+          className="nav-link btn"
+          activeClassName="active-link"
+        >
+          Contact
         </Link>
       </div>
     </div>

@@ -1,5 +1,5 @@
 $borderRadius: 0.2rem;
-$headerColor: rgba(96, 26, 161, 0.534);
+$headerColor: rgba(43, 41, 44, 0.699);
 
 .title-singlePage {
   display: flex;
@@ -14,11 +14,10 @@ $headerColor: rgba(96, 26, 161, 0.534);
     align-items: flex-start;
 
     span {
-      margin-right: 0.8rem;
-      color: #999999;
+      padding-right: 1rem;
+      color: rgba(128, 128, 128, 0.514);
       font-size: 0.8rem;
       font-weight: 400;
-      font-style: italic;
     }
   }
   h3 {
@@ -30,14 +29,11 @@ $headerColor: rgba(96, 26, 161, 0.534);
 }
 .blog-container {
   position: relative;
-  top: -3.9rem;
-  width: 97%;
-  margin: 0 auto 1rem;
-  background-color: #f3f3f3c0;
-  margin: 1rem auto;
+  top: -4rem;
+  width: 95%;
+  margin: 0 auto;
   padding: 1.4rem;
-
-  border-radius: 0.5rem;
+  border-radius: 10px;
   background-color: rgba(248, 251, 251, 0.938);
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -45,7 +41,6 @@ $headerColor: rgba(96, 26, 161, 0.534);
   h3 {
     text-align: center;
     margin: 0 auto;
-    padding: 0.2rem;
     color: $headerColor;
     height: 3rem;
     text-transform: uppercase;
@@ -55,6 +50,7 @@ $headerColor: rgba(96, 26, 161, 0.534);
     margin-top: 1rem;
     justify-content: start;
     text-align: start;
+    line-height: 1.6rem;
   }
 }
 Img {
@@ -64,13 +60,19 @@ Img {
   padding: 0.2rem;
 
   h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 0.2rem auto 0.1rem;
     color: $headerColor;
   }
   span {
-    color: #89aae6ca;
-    font-size: 0.8rem;
-    font-style: italic;
+    color: rgba(128, 128, 128, 0.514);
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 900px) {
+  h3 {
+    font-size: 1rem;
   }
 }

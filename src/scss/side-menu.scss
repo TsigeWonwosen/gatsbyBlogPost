@@ -1,10 +1,11 @@
 .side-menu {
+  display: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100vw;
   height: 100vh;
   width: 100%;
   background-color: rgb(7, 29, 110);
@@ -12,6 +13,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  transition: all 0.5s ease-in-out;
   .sideBar-logo {
     box-sizing: border-box;
     width: 50%;
@@ -24,7 +26,7 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     background-color: rgba(9, 38, 100, 0.925);
-    clip-path: polygon(0 0, 100% 40%, 100% calc(100% - 40vw), 0 100%);
+    clip-path: polygon(0 0, 100% 40%, 100% calc(100% - 40%), 0 100%);
     a {
       color: #19a0bbe0;
       font-size: 24px;
@@ -73,5 +75,20 @@
         border-radius: 10px;
       }
     }
+  }
+}
+
+.side-menu.active {
+  display: none;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .side-menu {
+    display: flex;
+  }
+  .side-menu.active {
+    display: flex;
   }
 }

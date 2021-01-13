@@ -178,13 +178,8 @@ body {
     }
   }
 }
-.side-menu {
-  display: none;
-}
+
 @media screen and (max-width: 892px) {
-  .side-menu {
-    display: flex;
-  }
   .home-title-1 {
     margin: 6rem auto 1rem !important;
     position: relative;

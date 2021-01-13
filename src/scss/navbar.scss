@@ -62,14 +62,17 @@
     transition: all 0.5sec ease-in-out;
     border-bottom: 4px solid transparent;
 
-    &:hover,
-    .active-link {
+    &:hover {
+      color: #ffffffe7;
+      border-bottom: 4px solid rgba(17, 218, 207, 0.747);
+      border-radius: 5px;
+    }
+    &.active-link {
       color: #ffffffe7;
       border-bottom: 4px solid rgba(17, 218, 207, 0.747);
       border-radius: 5px;
     }
   }
-
   .contact {
     color: rgba(245, 240, 240, 0.795);
     border-radius: 50px;
@@ -95,12 +98,16 @@
     font-size: 30px;
     font-weight: bold;
     outline: none;
+    transition: 0.5s;
   }
 }
 
 @media (max-width: 900px) {
   .nav-burger-close {
     display: block;
+    button {
+      transition: all 0.5s ease-in-out;
+    }
   }
 
   .header-container {

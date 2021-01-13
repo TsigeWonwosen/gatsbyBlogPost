@@ -70,7 +70,7 @@ const Header = ({ siteTitle }) => {
           </button>
         )}
       </div>
-      {open && <SideMenu />}
+      <SideMenu active = {open} />
     </header>
   )
 }

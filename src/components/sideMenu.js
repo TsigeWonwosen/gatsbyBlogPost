@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import SocialLink from "./socialLink"
 import "../scss/side-menu.scss"
-function sideMenu() {
+function sideMenu({ active }) {
   return (
-    <div className="side-menu">
+    <div className={`side-menu ${active ? "active" : ""}`}>
       <div className="sideBar-logo">
         <Link to="/">
           <span>Wonde</span>
@@ -23,6 +23,9 @@ function sideMenu() {
 
         <li>
           <Link to="/team">Teams</Link>
+        </li>
+        <li>
+          <Link to="/tag">Tags</Link>
         </li>
         <li>
           {" "}

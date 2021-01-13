@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useEffect}from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+
+
 
 import "../scss/blog-post.scss"
 
 export default function Template({ title, date, body, fluid, slug }) {
+
+  
   return (
     <div className="blog-post-container">
       <div className="blog-post">

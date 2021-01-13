@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  overscroll-behavior-y: none;
   a:hover,
   a:visited,
   a:link,
@@ -35,7 +36,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: "1000px";
+    max-width: "1200px";
     min-height: "76vh";
     padding: 1rem 0;
     margin: 1rem auto;
@@ -177,10 +178,15 @@ body {
     }
   }
 }
-
+.side-menu {
+  display: none;
+}
 @media screen and (max-width: 892px) {
+  .side-menu {
+    display: flex;
+  }
   .home-title-1 {
-    margin: 3rem auto 1rem !important;
+    margin: 6rem auto 1rem !important;
     position: relative;
   }
   h2 {

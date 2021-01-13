@@ -4,6 +4,7 @@ import SocialLink from "../socialLink"
 import { data } from "./data.js"
 
 import { motion } from "framer-motion"
+import { animationThree } from "../animations"
 
 import {
   AiOutlineArrowLeft,
@@ -42,18 +43,42 @@ function Hero() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 3,
+        duration: 1000,
         type: "spring",
         stiffness: 250,
-        damping: 20,
+        damping: 10,
+      },
+    },
+  }
+  const downArrowController = {
+    hidden: { y: -20 },
+
+    visible: {
+      y: 0,
+      transition: {
+        duration: 2,
+        yoyo: Infinity,
       },
     },
   }
   return (
     <div className="hero">
       <img src={url} alt={name} className="hero-image" />
-      <section className="hero-header">
-        <motion.h1 variants={fadeLeft} initial="hidden" animate="visible">
+      <motion.section
+        initial="out"
+        animate="end"
+        exit="out"
+        variants={animationThree}
+        section
+        className="hero-header"
+      >
+        <motion.h1
+          variants={fadeLeft}
+          initial="hidden"
+          animate="visible"
+          drag={"x"}
+          dragConstraints={{ left: -100, right: 0 }}
+        >
           {title}
         </motion.h1>
         <SocialLink />
@@ -63,16 +88,13 @@ function Hero() {
             <IoIosArrowRoundForward className="btn-arrow" />
           </motion.button>
         </Link>
-      </section>
+      </motion.section>
       <div className="hero-btn-container">
-        {/* {data.map((item)=>{
-          
-        })} */}
         <div
           role="button"
           aria-label="Next Image"
           tabIndex={0}
-          className={`hero-btn ${imageIndex === 0 ? "active" : ""}`}
+          className={`hero-btn ${imageIndex === 0 && "active"}`}
           onClick={() => handleClick(0)}
           onKeyDown={() => handleClick(0)}
         ></div>
@@ -80,7 +102,7 @@ function Hero() {
           role="button"
           aria-label="Next Image"
           tabIndex={-1}
-          className={`hero-btn ${imageIndex === 1 ? "active" : ""}`}
+          className={`hero-btn ${imageIndex === 1 && "active"}`}
           onClick={() => handleClick(1)}
           onKeyDown={() => handleClick(1)}
         ></div>
@@ -88,7 +110,7 @@ function Hero() {
           role="button"
           aria-label="Next Image"
           tabIndex={-2}
-          className={`hero-btn ${imageIndex === 2 ? "active" : ""}`}
+          className={`hero-btn ${imageIndex === 2 && "active"}`}
           onClick={() => handleClick(2)}
           onKeyDown={() => handleClick(2)}
         ></div>
@@ -116,11 +138,16 @@ function Hero() {
       >
         <AiOutlineArrowLeft />
       </div>
-      <div className="hero-downArrow">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={downArrowController}
+        className="hero-downArrow"
+      >
         <a href="#home">
           <AiOutlineDownCircle />
         </a>
-      </div>
+      </motion.div>
     </div>
   )
 }

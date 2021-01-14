@@ -51,7 +51,7 @@ function Hero() {
     },
   }
   const downArrowController = {
-    hidden: { y: -20 },
+    hidden: { y: -6 },
 
     visible: {
       y: 0,
@@ -65,11 +65,10 @@ function Hero() {
     <div className="hero">
       <img src={url} alt={name} className="hero-image" />
       <motion.section
-        initial="out"
-        animate="end"
-        exit="out"
+        initial="in"
+        animate="out"
+        exit="end"
         variants={animationThree}
-        section
         className="hero-header"
       >
         <motion.h1

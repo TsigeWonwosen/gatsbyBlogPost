@@ -1,20 +1,21 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import SideMenu from "./sideMenu"
+
 import "./layout.scss"
 import "../scss/blog-post.scss"
 
 const Layout = ({ children }) => {
+  const [open, setOpen] = React.useState(false)
+
+  const handleChange = () => {
+    setOpen(!open)
+  }
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,23 +34,27 @@ const Layout = ({ children }) => {
         flexDirection: "column",
         width: "100vw",
         margin: "auto",
-        overflowX:"hidden"
+        overflowX: "hidden",
       }}
     >
       <div>
-        <Header siteTitle={data.site.siteMetadata.title} />
-       </div>
-        <div
-          style={{
-            flexGrow: "1",
-            margin: `1rem auto`,
-            maxWidth: 1000,
-           
-          }}
-        >
-          <main>{children}</main>
-        </div>
-    
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          handleChange={handleChange}
+          open={open}
+        />
+      </div>
+      <div
+        style={{
+          flexGrow: "1",
+          margin: `0rem auto`,
+          maxWidth: 1200,
+        }}
+      >
+        <main>{children}</main>
+      </div>
+      <SideMenu active={open} />
+
       <Footer />
     </div>
   )

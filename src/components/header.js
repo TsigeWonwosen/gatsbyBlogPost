@@ -1,33 +1,16 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import SideMenu from "./sideMenu"
 import LogoImg from "./../images/icon-48x48.png"
 import "../scss/navbar.scss"
 
 import { BsJustifyRight } from "react-icons/bs"
 import { CgClose } from "react-icons/cg"
 
-const Header = ({ siteTitle }) => {
-  const [open, setOpen] = React.useState(false)
-
-  const handleChange = () => {
-    setOpen(!open)
-  }
+const Header = ({ siteTitle, handleChange, open }) => {
   return (
     <header className="header-container">
-      <div
-        className="hea"
-        style={{
-          margin: `0 auto`,
-          maxWidth: "1000px",
-          height: `100%`,
-          display: `flex`,
-          textAlign: `center`,
-          alignItems: "center",
-          justifyContent: `space-between`,
-        }}
-      >
+      <div className="header">
         <Link to="/">
           <div className="logo">
             <img src={LogoImg} alt="logo-image" />
@@ -70,7 +53,6 @@ const Header = ({ siteTitle }) => {
           </button>
         )}
       </div>
-      <SideMenu active = {open} />
     </header>
   )
 }

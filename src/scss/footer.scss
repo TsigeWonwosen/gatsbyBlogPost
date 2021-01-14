@@ -1,26 +1,26 @@
 $colorFooter: rgba(229, 227, 231, 0.808);
 
 footer {
-  position: relative;
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   height: 8rem;
-  width: 100%;
+  width: 100vw;
+  background-color: #101522;
 }
 .footer {
   overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
-  padding: 0.4rem 8rem;
+  padding: 0.3rem 2rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: #101522;
+  max-width: 1200px;
   color: $colorFooter;
   .footer-up {
     width: 100%;

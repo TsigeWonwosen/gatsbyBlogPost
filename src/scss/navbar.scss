@@ -1,31 +1,47 @@
 .header-container {
-  // background: rgba(19, 1, 1, 0.205);
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background: rgba(77, 79, 148, 0.726);
   height: 70px;
-  position: relative;
-  z-index: 50;
+  width: 100vw;
+  overflow-x: hidden;
   box-sizing: border-box;
+  z-index: 41;
+  .header {
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
+
 .logo {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  width: 100px;
-  height: 50px;
-  padding: auto;
+  align-items: center;
+  text-align: center;
+  width: 130px;
+  height: 100%;
+  margin: auto;
 }
 .logo img {
+  margin: 0;
+  padding: 0;
   width: 40px;
   height: 40px;
   object-fit: cover;
-  color: #fff;
+  position: relative;
 }
 .logo span {
-  color: #e0e9e7c2;
+  color: #f3f3f3e7;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90%;
   padding-top: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -86,33 +102,39 @@
   }
 }
 .nav-burger-close {
+  z-index: 3;
   position: absolute;
-  top: 34px;
-  right: 30px;
+  top: 70px;
+  right: 50px;
   display: none;
-  z-index: 50;
-  button {
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: none;
-    font-size: 30px;
-    font-weight: bold;
-    outline: none;
-    transition: 0.5s;
+  transform: translateY(-50px);
+}
+button {
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 33px;
+  font-weight: bold;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.493);
+  border-radius: 20px;
+  padding: 0.5rem;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
 @media (max-width: 900px) {
   .nav-burger-close {
-    display: block;
+    // z-index: 5010;
+    display: flex;
     button {
       transition: all 0.5s ease-in-out;
     }
-  }
-
-  .header-container {
-    margin-bottom: 1rem;
-    height: 100px;
   }
 
   .logo {

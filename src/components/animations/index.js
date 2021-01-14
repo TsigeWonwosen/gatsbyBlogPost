@@ -20,16 +20,16 @@ export const transition = {
 
 export const animationThree = {
   in: {
-    opacity: 1,
+    opacity: 0,
     x: -300,
   },
   out: {
-    opacity: 0,
-    x: 300,
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.3, duration: .5 },
   },
   end: {
     x: 0,
     opacity: 1,
-    transition: { delay: 0.4 },
   },
 }

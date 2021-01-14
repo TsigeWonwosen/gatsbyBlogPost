@@ -25,7 +25,7 @@ function sideMenu({ active }) {
           <Link to="/team">Teams</Link>
         </li>
         <li>
-          <Link to="/tag">Tags</Link>
+          <Link to="/task">Tags</Link>
         </li>
         <li>
           {" "}

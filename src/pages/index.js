@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
-import { Location } from "@reach/router"
+// import { Location } from "@reach/router"
 
 import Layout from "../components/layout"
 import SideBar from "../components/sideBar"
@@ -15,6 +15,7 @@ import { AnimatePresence } from "framer-motion"
 
 import "./../scss/blog-post.scss"
 const IndexPage = ({ data }) => {
+  
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -25,6 +26,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <AnimatePresence exitBeforeEnter>
+
       <Layout style={{ minHeight: "100vh" }}>
         <SEO title="Home" />
         <Hero />

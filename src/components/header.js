@@ -33,7 +33,7 @@ const Header = ({ siteTitle, handleChange, open }) => {
           </Link>
           <Link
             to="/contact"
-            className="nav-link btn"
+            className="nav-link contact"
             activeClassName="active-link"
           >
             Contact

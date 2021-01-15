@@ -163,17 +163,24 @@ body {
       text-decoration: none;
     }
     .readMore {
-      border: 1px solid #6b6f9bb9;
-      color: #6b6f9bb9;
-      border-radius: 50px;
+      background-color: #1ccddaa1;
+      color: #ffffff;
+      border-radius: 15px;
       position: absolute;
       display: none;
       right: 9px;
       bottom: 6px;
-      padding: 0.1rem 0.5rem;
+      padding: 0.4rem 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+      box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+        15px 15px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
       &:hove {
-        background-color: rgba(115, 48, 179, 0.548);
-        color: rgba(255, 248, 248, 0.616);
+        color: #ffffff;
       }
     }
   }

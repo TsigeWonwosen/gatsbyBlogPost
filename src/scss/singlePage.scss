@@ -1,6 +1,10 @@
 $borderRadius: 0.2rem;
-$headerColor: rgba(43, 41, 44, 0.699);
+$headerColor: rgba(72, 66, 75, 0.699);
 
+.single-page-container {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
 .title-singlePage {
   display: flex;
   flex-direction: column;
@@ -16,7 +20,7 @@ $headerColor: rgba(43, 41, 44, 0.699);
     span {
       padding-right: 1rem;
       color: rgba(128, 128, 128, 0.514);
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 400;
     }
   }
@@ -75,4 +79,8 @@ Img {
   h3 {
     font-size: 1rem;
   }
+  .single-page-container {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
 }

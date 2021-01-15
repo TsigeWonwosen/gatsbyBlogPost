@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="footer-down">
           <span>
             <span>{data.site.siteMetadata.author}</span> ©{" "}
-            {new Date().getFullYear()}.
+            {new Date().getFullYear()}. Made with Gatsby. All Rights Reserved.
           </span>
         </div>
       </div>

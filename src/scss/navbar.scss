@@ -1,3 +1,6 @@
+$color: #f3f3f3e7;
+$btnColor: rgba(38, 184, 201, 0.856);
+
 .header-container {
   position: absolute;
   top: 0;
@@ -28,6 +31,11 @@
   width: 130px;
   height: 100%;
   margin: auto;
+  transition: 0.3s ease;
+  &:hover {
+    color: lighten($color, 10%);
+    transform: scale(1.05);
+  }
 }
 .logo img {
   margin: 0;
@@ -38,7 +46,7 @@
   position: relative;
 }
 .logo span {
-  color: #f3f3f3e7;
+  color: $color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,10 +57,6 @@
   letter-spacing: 0.1rem;
   font-family: bold;
   transition: all 0.5sec ease-in-out;
-
-  &:hover {
-    color: #faf8f5d3;
-  }
 }
 .navBar {
   height: 100%;
@@ -64,12 +68,12 @@
   letter-spacing: 0.1rem;
   .nav-link {
     box-sizing: border-box;
-    color: #ffffff9a;
+    color: $color;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 0.4rem;
     font-size: 0.6rem;
     font-weight: bold;
     width: 5rem;
@@ -79,25 +83,29 @@
     border-bottom: 4px solid transparent;
 
     &:hover {
-      color: #ffffffe7;
-      border-bottom: 4px solid rgba(17, 218, 207, 0.747);
+      color: lighten($color, 10%);
+      border-bottom: 4px solid $btnColor;
       border-radius: 5px;
     }
     &.active-link {
-      color: #ffffffe7;
-      border-bottom: 4px solid rgba(17, 218, 207, 0.747);
-      border-radius: 5px;
+      color: lighten($color, 10%);
+      border-bottom: 4px solid $btnColor;
+      border-radius: 3px;
     }
   }
   .contact {
-    color: rgba(245, 240, 240, 0.795);
-    border-radius: 50px;
-    background-color: #6b6f9bb9;
+    color: $color;
+    border-radius: 10px;
+    background-color: $btnColor;
+    box-shadow: -2px 4px 30px rgba(255, 255, 255, 0.493);
     transition: all 0.3sec ease-in-out;
 
     &:hover {
-      color: #ffffffe7;
-      background-color: #309c8a75;
+      color: lighten($color, 20%);
+      border-radius: 10px;
+      transform: scaleY(1.05);
+      background-color: lighten($btnColor, 10%);
+      box-shadow: -2px 4px 50px rgba(255, 255, 255, 0.493);
     }
   }
 }
@@ -108,23 +116,23 @@
   right: 50px;
   display: none;
   transform: translateY(-50px);
-}
-button {
-  display: grid;
-  place-items: center;
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-  border: none;
-  font-size: 33px;
-  font-weight: bold;
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.493);
-  border-radius: 20px;
-  padding: 0.5rem;
-  transition: 0.5s;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.1);
+  button {
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    color: $color;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.493);
+    border-radius: 20px;
+    padding: 0.3rem;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.07);
+    }
   }
 }
 

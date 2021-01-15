@@ -21,7 +21,7 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} />
-      <div className="row">
+      <div className="row single-page-container">
         <div className="col1">
           <div className="title-singlePage">
             <h3>{title}</h3>

@@ -82,10 +82,10 @@ function Hero() {
         </motion.h1>
         <SocialLink />
         <Link to="/contact">
-          <motion.button animate className="contact-btn">
+          <button className="contact-btn">
             Contact Me
             <IoIosArrowRoundForward className="btn-arrow" />
-          </motion.button>
+          </button>
         </Link>
       </motion.section>
       <div className="hero-btn-container">

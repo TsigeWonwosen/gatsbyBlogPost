@@ -61,12 +61,11 @@
 }
 .hero-btn-container {
   position: absolute;
-  bottom: 60px;
-  left: 48%;
+  bottom: 70px;
+  left: 50%;
   display: flex;
   z-index: 40;
-  object-position: 50% 50%;
-
+  transform: translateX(-50%);
   .hero-btn {
     box-sizing: border-box;
     width: 17px;
@@ -101,6 +100,7 @@
   position: absolute;
   top: 50%;
   right: 20px;
+  translate: translateY(-50%);
   color: #ffffff;
   font-size: 29px;
   font-weight: bold;
@@ -118,6 +118,8 @@
   position: absolute;
   top: 50%;
   left: 20px;
+  translate: translateY(-50%);
+
   color: #ffffff;
   font-size: 29px;
   font-weight: bold;
@@ -164,9 +166,10 @@ a {
   padding: 0;
   box-sizing: border-box;
   position: absolute;
-  left: 49.33%;
-  bottom: 0.1%;
-  font-size: clamp(2rem, 2.5vw, 44px);
+  left: 48.5%;
+  bottom: 0.2%;
+  transform: translateX(-50%);
+  font-size: clamp(2.2rem, 2.5vw, 44px);
   z-index: 23;
   a {
     margin: 0;

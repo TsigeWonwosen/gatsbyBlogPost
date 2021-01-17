@@ -1,18 +1,15 @@
-import React, { useEffect}from "react"
+import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-
-
 import "../scss/blog-post.scss"
 
-export default function Template({ title, date, body, fluid, slug }) {
-
-  
+export default function Post({ title, date, body, fluid, slug }) {
   return (
     <div className="blog-post-container">
-      <div className="blog-post">
+      <div className="Blog-post">
         <Img
+          className="post-img"
           fluid={fluid}
           objectFit="cover"
           objectPosition="50% 50%"
@@ -22,11 +19,11 @@ export default function Template({ title, date, body, fluid, slug }) {
           <h3>{title}</h3>
           <span>{date}</span>
         </div>
-        {body && <p>{body}</p>}
-        <Link to={`/posts${slug}`} className="readMore">
-          Read More
-        </Link>
+        <div>{body && <p>{body}</p>}</div>
       </div>
+      <Link to={`/posts${slug}`} className="readMore">
+        Read More
+      </Link>
     </div>
   )
 }

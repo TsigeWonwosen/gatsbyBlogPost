@@ -1,0 +1,39 @@
+.side-bar {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  h4 {
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .readMoreSide {
+    background-color: #1ccddaa1;
+    color: #ffffff;
+    border-radius: 15px;
+    position: absolute;
+    display: none;
+    right: 1.1rem;
+    bottom: 8px;
+    padding: 0.3rem 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    box-shadow: -5px -15px 15px rgba(255, 255, 255, 0.2),
+      5px 15px 15px rgba(0, 0, 0, 0.1),
+      inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+      inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    &:hove {
+      color: #ffffff;
+    }
+  }
+  .Blog-post {
+    &:hover .readMoreSide {
+      display: block;
+    }
+  }
+}

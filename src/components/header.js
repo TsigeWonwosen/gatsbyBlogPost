@@ -13,8 +13,10 @@ const Header = ({ siteTitle, handleChange, open }) => {
       <div className="header">
         <Link to="/">
           <div className="logo">
-            <img src={LogoImg} alt="logo-image" />
-            <span>onde</span>
+            {/* <img src={LogoImg} alt="logo-image" /> */}
+            <span>{"<"}</span>
+            Wonde
+            <span>{"/>"}</span>
           </div>
         </Link>
 

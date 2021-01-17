@@ -3,6 +3,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import "../scss/about.scss"
+
 const About = () => (
   <Layout>
     <SEO title="About" />

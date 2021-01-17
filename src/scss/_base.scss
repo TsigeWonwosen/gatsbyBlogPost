@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+$color: #f3f3f3e7;
+$btnColor: rgba(38, 184, 201, 0.856);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(157, 156, 160, 0.219);
+  overflow-x: hidden;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #1a17179d;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0;
+  }
+  p {
+    text-align: left;
+    font-size: 0.92rem;
+    line-height: 1.5rem;
+    color: #0c0c0c77;
+  }
+}

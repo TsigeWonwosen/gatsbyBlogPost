@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Post from "./sideBarSinglePost"
-import "../scss/social-link.scss"
+import "../scss/side-post.scss"
 const SideBar = () => {
   const {
     allMarkdownRemark: { edges },
@@ -11,14 +11,7 @@ const SideBar = () => {
     <div className="side-bar">
       <h4>Recent Blogs</h4>
 
-      <ul
-        style={{
-          listStyle: "none",
-          width: "90%",
-          padding: "0.2rem",
-          margin: "0.2rem auto",
-        }}
-      >
+      <ul>
         {edges.map(
           ({
             node: {

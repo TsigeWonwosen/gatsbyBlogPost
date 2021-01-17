@@ -1,5 +1,4 @@
-$color: #f3f3f3e7;
-$btnColor: rgba(38, 184, 201, 0.856);
+@import "base";
 
 .header-container {
   position: absolute;
@@ -25,16 +24,25 @@ $btnColor: rgba(38, 184, 201, 0.856);
 
 .logo {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 130px;
+  width: 103px;
   height: 100%;
+  padding: 0.3rem 0.4rem;
   margin: auto;
-  transition: 0.3s ease;
+  color: lighten($color, 4);
+  border: 2px solid rgba(255, 255, 255, 0.705);
+  border-radius: 15px 1px 15px 1px;
+  box-shadow: 2px 7px 25px rgba(12, 12, 12, 0.155);
+  font-size: 1rem;
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  transition: all 0.5sec ease-in-out;
   &:hover {
     color: lighten($color, 10%);
-    transform: scale(1.05);
+    transform: scaleY(1.02);
+    box-shadow: 2px 15px 30px rgba(12, 12, 12, 0.255);
   }
 }
 .logo img {
@@ -43,20 +51,15 @@ $btnColor: rgba(38, 184, 201, 0.856);
   width: 40px;
   height: 40px;
   object-fit: cover;
+  letter-spacing: 0.1rem;
   position: relative;
 }
 .logo span {
-  color: $color;
+  color: $btnColor;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: sans-serif;
-  letter-spacing: 0.1rem;
-  font-family: bold;
-  transition: all 0.5sec ease-in-out;
 }
 .navBar {
   height: 100%;
@@ -97,7 +100,7 @@ $btnColor: rgba(38, 184, 201, 0.856);
     color: $color;
     border-radius: 10px;
     background-color: $btnColor;
-    box-shadow: -2px 4px 30px rgba(255, 255, 255, 0.493);
+    box-shadow: -2px 4px 30px rgba(255, 255, 255, 0.193);
     transition: all 0.3sec ease-in-out;
 
     &:hover {
@@ -138,7 +141,6 @@ $btnColor: rgba(38, 184, 201, 0.856);
 
 @media (max-width: 900px) {
   .nav-burger-close {
-    // z-index: 5010;
     display: flex;
     button {
       transition: all 0.5s ease-in-out;
@@ -147,7 +149,6 @@ $btnColor: rgba(38, 184, 201, 0.856);
 
   .logo {
     font-size: 1rem;
-    color: #f0e0e0cb;
   }
   .navBar {
     display: none;

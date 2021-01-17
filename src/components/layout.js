@@ -6,7 +6,7 @@ import Header from "./header"
 import Footer from "./footer"
 import SideMenu from "./sideMenu"
 
-import "./layout.scss"
+// import "./layout.scss"
 import "../scss/blog-post.scss"
 
 const Layout = ({ children }) => {
@@ -44,15 +44,8 @@ const Layout = ({ children }) => {
           open={open}
         />
       </div>
-      <div
-        style={{
-          flexGrow: "1",
-          margin: `0rem auto`,
-          maxWidth: 1200,
-        }}
-      >
-        <main>{children}</main>
-      </div>
+
+      <main style={{ width: "100%" }}>{children}</main>
       <SideMenu active={open} />
 
       <Footer />

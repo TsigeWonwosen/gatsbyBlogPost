@@ -30,6 +30,7 @@ export default function Footer() {
     AOS.init({
       duration: 800,
     })
+    AOS.refresh()
   }, [])
 
   const data = useStaticQuery(graphql`
@@ -48,10 +49,16 @@ export default function Footer() {
     <footer>
       <div className="footer">
         <div className="footer-up">
-          <div className="address" data-aos="fade-up" data-aos-delay="300">
+          <div
+            className="address"
+            data-aos="flip-left"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out-cubic"
+          >
             <SocialLink />
           </div>
-          <div className="footer-left">
+          <div className="footer-left" data-aos={"fade-left"}>
             <Link to="/">Home</Link>
             <Link to="/about/">About</Link>
             <Link to="/contact">Contact</Link>
@@ -64,7 +71,7 @@ export default function Footer() {
           </span>
         </div>
       </div>
-      <div className="hero-upArrow" data-aos="fade-left" data-aos-delay="900">
+      <div className="hero-upArrow" data-aos={"fade-right"}>
         <a href="#home">
           <AiOutlineUpCircle />
         </a>

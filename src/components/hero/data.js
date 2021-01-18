@@ -1,6 +1,6 @@
-import img0 from "./bernardoh.jpg"
-import img1 from "./olga-stalska.jpg"
-import img2 from "./marek-piwnicki.jpg"
+import img1 from "./bernardoh.jpg"
+import img2 from "./olga-stalska.jpg"
+import img0 from "./marek-piwnicki.jpg"
 export const data = [
   {
     id: 0,

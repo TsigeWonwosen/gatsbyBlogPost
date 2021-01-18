@@ -11,7 +11,7 @@ import Hero from "../components/hero/hero.js"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-import '../scss/social-link.scss'
+import "../scss/social-link.scss"
 
 import { AnimatePresence } from "framer-motion"
 
@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
                       },
                     },
                   }) => (
-                    <li key={id} data-aos="zoom-in-up" data-aos-easing="linear">
+                    <li key={id} data-aos="zoom-in-up" data-aos-duration="1000">
                       <Post
                         title={title}
                         date={date}
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
                 )}
               </ul>
             </div>
-            <div className="col2" data-aos="fade-left" data-aos-delay="750">
+            <div className="col2" data-aos="fade-left" data-aos-duration="750">
               <div className="popular-blog">
                 <SideBar />
               </div>

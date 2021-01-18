@@ -7,6 +7,8 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa"
 
+import "aos/dist/aos.css"
+
 const data = [
   {
     id: 1,
@@ -46,6 +48,11 @@ const links = data.map(link => {
 
 export default ({ styleClass }) => {
   return (
-    <ul className={`social-links ${styleClass ? styleClass : ""}`}>{links}</ul>
+    <ul
+      
+      className={`social-links ${styleClass ? styleClass : ""}`}
+    >
+      {links}
+    </ul>
   )
 }

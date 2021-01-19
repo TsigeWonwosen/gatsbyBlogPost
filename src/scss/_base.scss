@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap");
 $color: #f3f3f3e7;
 $btnColor: rgba(38, 184, 201, 0.856);
 
 *,
 *::before,
 *::after {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 html {
@@ -16,7 +18,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: rgba(157, 156, 160, 0.219);
-  overflow-x: hidden;
+  // overflow-x: hidden;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   a:hover,
@@ -40,7 +42,46 @@ body {
     line-height: 1.5rem;
     color: #0c0c0c77;
   }
-  li{
-    list-style:none
+  li {
+    list-style: none;
+  }
+}
+
+//Set text color based on bg
+
+@function set-text-color($Color) {
+  @if (lightness($Color) > 70) {
+    @return #3333;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Set background & text color
+
+@mixin set-background($bgcolor) {
+  background-color: $bgcolor;
+  color: set-text-color(bgcolor);
+}
+
+// Mrgin & padding classs
+
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem 0;
   }
 }

@@ -1,5 +1,5 @@
-@import '../../scss/base';
- 
+@import "../../scss/base";
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -10,7 +10,7 @@
   .hero-header {
     position: absolute;
     display: flex;
-    width: calc(300px + 10vw);
+    width: calc(400px + 10vw);
     height: 35%;
     top: 38%;
     left: 15%;
@@ -21,43 +21,42 @@
     align-items: flex-start;
     h1 {
       color: #ffffffab;
+      font-family: "Source Serif Pro", serif;
+      // color: set-text-color(#484A69);
       font-weight: 700;
       margin: 0;
       font-size: calc(10px + 2vw);
     }
 
-          .contact-btn {
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-9);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0.3rem 0.4rem;
-  font-weight: 700;
-  width: 160px;
-  margin: 0.5rem 0rem 0rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  font-size: 0.7rem;
-  letter-spacing: var(--spacing);
-  border-radius: var(--radius);
-  box-shadow: 1px 10px 30px 10px rgba(14, 13, 13, 0.2);
-  transition: box-shadow 0.3s ease;
-  &:hover {
-    box-shadow: 1px 10px 60px 30px rgba(14, 13, 13, 0.2);
-    background-color:lighten($btnColor,10%);
+    .contact-btn {
+      background: var(--clr-primary-5);
+      color: var(--clr-primary-9);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0.3rem 0.4rem;
+      font-weight: 700;
+      width: 160px;
+      margin: 0.5rem 0rem 0rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      -webkit-transition: var(--transition);
+      transition: var(--transition);
+      font-size: 0.7rem;
+      letter-spacing: var(--spacing);
+      border-radius: var(--radius);
+      box-shadow: 1px 10px 30px 10px rgba(14, 13, 13, 0.2);
+      transition: box-shadow 0.3s ease;
+      &:hover {
+        box-shadow: 1px 10px 60px 30px rgba(14, 13, 13, 0.2);
+        background-color: lighten($btnColor, 10%);
+      }
+    }
   }
 }
- }
- 
- }
-  
-
 
 .hero-image {
   position: absolute;
@@ -186,7 +185,7 @@
     z-index: -1;
     opacity: 0.6;
   }
-  
+
   .hero-rightArrow {
     top: 50%;
     right: 10px;
@@ -208,8 +207,8 @@
   }
 
   .hero-downArrow {
-  position: absolute;
-  left: 45.5%;
-  bottom: 0.3%
+    position: absolute;
+    left: 45.5%;
+    bottom: 0.3%;
   }
 }

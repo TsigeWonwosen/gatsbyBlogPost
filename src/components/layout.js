@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
       </div>
 
       <main style={{ width: "100%" }}>{children}</main>
-      <SideMenu active={open} />
+      <SideMenu active={open} handleChange={handleChange} />
 
       <Footer />
     </div>

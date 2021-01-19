@@ -1,7 +1,6 @@
 import React from "react"
 import SocialLink from "./socialLink"
 import { AiOutlineUpCircle } from "react-icons/ai"
-
 import { motion } from "framer-motion"
 
 import AOS from "aos"
@@ -12,6 +11,7 @@ import "../scss/footer.scss"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 export default function Footer() {
+
   const fadeLeft = {
     hidden: { opacity: 0, x: 100 },
 
@@ -47,18 +47,17 @@ export default function Footer() {
   `)
   return (
     <footer>
-      <div className="footer">
+      <div className="Footer">
         <div className="footer-up">
-          <div
+          <motion.div
             className="address"
-            data-aos="flip-left"
-            data-aos-delay="50"
-            data-aos-duration="700"
-            data-aos-easing="ease-in-out-cubic"
+            initial="hidden"
+            animate="visible"
+            variants={fadeLeft}
           >
             <SocialLink />
-          </div>
-          <div className="footer-left" data-aos={"fade-left"}>
+          </motion.div>
+          <div className="footer-left-side">
             <Link to="/">Home</Link>
             <Link to="/about/">About</Link>
             <Link to="/contact">Contact</Link>

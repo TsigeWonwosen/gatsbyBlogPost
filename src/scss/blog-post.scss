@@ -101,6 +101,8 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: rgba(249, 248, 251, 0.938);
@@ -180,8 +182,10 @@
 
 @media (max-width: 950px) {
   .row {
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -189,12 +193,20 @@
     box-sizing: border-box;
     .col1 {
       width: 100%;
+      margin-right: 0;
       ul {
         margin: 0 auto;
       }
     }
     .col2 {
-      display: none;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1rem;
+      width: 100%;
+      padding: 0;
+      .advert {
+        display: none;
+      }
     }
   }
 

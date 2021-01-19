@@ -4,7 +4,8 @@ import React from "react"
 import LogoImg from "./../images/icon-48x48.png"
 import "../scss/navbar.scss"
 
-import { BsJustifyRight } from "react-icons/bs"
+// import { BsJustifyRight } from "react-icons/bs"
+import { FaBars } from "react-icons/fa"
 import { CgClose } from "react-icons/cg"
 
 const Header = ({ siteTitle, handleChange, open }) => {
@@ -46,7 +47,7 @@ const Header = ({ siteTitle, handleChange, open }) => {
         {!open ? (
           <button onClick={handleChange}>
             {" "}
-            <BsJustifyRight />{" "}
+            <FaBars />
           </button>
         ) : (
           <button onClick={handleChange}>

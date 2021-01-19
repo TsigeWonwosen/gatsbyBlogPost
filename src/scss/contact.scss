@@ -43,6 +43,14 @@
 //   place-items: center;
 //   padding: 5rem 0;
 // }
+
+.contact-page {
+  margin-top: 5.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contact-form {
   background: var(--clr-white);
   border-radius: var(--radius);
@@ -50,6 +58,7 @@
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   width: 80vw;
+  max-height: 90%;
   max-width: 35rem;
 }
 .contact-form:hover {

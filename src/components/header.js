@@ -1,38 +1,93 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import LogoImg from "./../images/icon-48x48.png"
+import React, { useState } from "react"
+// import { Location } from "@reach/router"
+
+import Dropdown from "./dropDown/Dropdown"
 import "../scss/navbar.scss"
 
-// import { BsJustifyRight } from "react-icons/bs"
+import { IoIosArrowDropdown } from "react-icons/io"
 import { FaBars } from "react-icons/fa"
 import { CgClose } from "react-icons/cg"
 
-const Header = ({ siteTitle, handleChange, open }) => {
+const Header = ({ handleChange, open }) => {
+  const [dropdown, setDropdown] = useState(false)
+
+  const url = typeof window !== "undefined" ? window.location.href : ""
+
+  let headerStyle = ""
+  if (url === "http://localhost:8000/") {
+    headerStyle = "header-container"
+  } else {
+    headerStyle = "header-container2"
+  }
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false)
+    } else {
+      setDropdown(true)
+    }
+  }
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false)
+    } else {
+      setDropdown(false)
+    }
+  }
   return (
-    <header className="header-container">
+    <header className={headerStyle}>
       <div className="header">
         <Link to="/">
           <div className="logo">
-            {/* <img src={LogoImg} alt="logo-image" /> */}
-            <span>{"<"}</span>
+            <span>{"{"}</span>
             Wonde
-            <span>{"/>"}</span>
+            <span>{"}"}</span>
           </div>
         </Link>
 
         <div className="navBar">
-          <Link to="/" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/"
+            className="nav-link fromRight"
+            activeClassName="active-link"
+          >
             Home
           </Link>
-          <Link to="/about" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/about"
+            className="nav-link fromRight"
+            activeClassName="active-link"
+          >
             About
           </Link>
-          <Link to="/task" activeClassName="active-link" className="nav-link">
+          <Link
+            to="/task"
+            activeClassName="active-link "
+            className="nav-link fromRight"
+          >
             Tags
           </Link>
-          <Link to="/team" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/team"
+            className="nav-link fromRight"
+            activeClassName="active-link"
+          >
             Teams
+          </Link>
+          <Link
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            to="#"
+            className="nav-link nav-item"
+            activeClassName="active-link"
+          >
+            Services{" "}
+            <span className="dropdown">
+              <IoIosArrowDropdown />{" "}
+            </span>
+            {dropdown && <Dropdown />}
           </Link>
           <Link
             to="/contact"
@@ -45,27 +100,23 @@ const Header = ({ siteTitle, handleChange, open }) => {
       </div>
       <div className="nav-burger-close">
         {!open ? (
-          <button onClick={handleChange}>
-            {" "}
-            <FaBars />
-          </button>
+          <div className="nav-burger-menu">
+            <span className="menu open"> Menu</span>
+            <button onClick={handleChange}>
+              <FaBars />
+            </button>
+          </div>
         ) : (
-          <button onClick={handleChange}>
-            {" "}
-            <CgClose />
-          </button>
+          <div className="nav-burger-menu">
+            <h4 className="menu close">Close</h4>
+            <button onClick={handleChange}>
+              <CgClose />
+            </button>
+          </div>
         )}
       </div>
     </header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

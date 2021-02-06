@@ -27,9 +27,9 @@ function sideMenu({ active, handleChange }) {
         <li>
           <Link to="/task">Tags</Link>
         </li>
-        <li>
+        <li className="contact-sideMenu">
           {" "}
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact"> 🇪🇹 Contact</Link>
         </li>
       </ul>
     </div>

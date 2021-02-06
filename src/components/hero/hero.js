@@ -17,13 +17,13 @@ import "./hero.scss"
 function Hero() {
   const [imageIndex, setValue] = useState(0)
 
-  function f1() {
-    if (imageIndex < data.length - 1) {
-      setValue(imageIndex + 1)
-    } else {
-      setValue(0)
-    }
-  }
+  // function f1() {
+  //   if (imageIndex < data.length - 1) {
+  //     setValue(imageIndex + 1)
+  //   } else {
+  //     setValue(0)
+  //   }
+  // }
   useEffect(() => {
     // const interval = setTimeout(f1, 3000)
     // return () => {
@@ -35,7 +35,7 @@ function Hero() {
 
   const handleClick = num => setValue(num)
 
-  const { id, title, name, url } = data[imageIndex]
+  const { id, title, name, url, subtitle, description } = data[imageIndex]
   const fadeLeft = {
     hidden: { opacity: 0, x: -100 },
 
@@ -71,6 +71,7 @@ function Hero() {
         variants={animationThree}
         className="hero-header"
       >
+        <h3> {subtitle}</h3>
         <motion.h1
           variants={fadeLeft}
           initial="hidden"
@@ -80,6 +81,7 @@ function Hero() {
         >
           {title}
         </motion.h1>
+        <p>{description}</p>
         <SocialLink />
         <Link to="/contact">
           <button className="contact-btn">

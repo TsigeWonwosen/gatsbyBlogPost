@@ -6,7 +6,6 @@ import Header from "./header"
 import Footer from "./footer"
 import SideMenu from "./sideMenu"
 
-// import "./layout.scss"
 import "../scss/blog-post.scss"
 
 const Layout = ({ children }) => {
@@ -26,6 +25,7 @@ const Layout = ({ children }) => {
     }
   `)
 
+  
   return (
     <div
       style={{

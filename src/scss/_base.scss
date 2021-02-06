@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap");
+
 $color: #f3f3f3e7;
 $btnColor: rgba(38, 184, 201, 0.856);
 
@@ -21,6 +23,7 @@ body {
   // overflow-x: hidden;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
   a:hover,
   a:visited,
   a:link,
@@ -31,16 +34,19 @@ body {
   h2,
   h3,
   h4 {
-    color: #1a17179d;
+    color: #1a171783;
     font-weight: 400;
     text-transform: uppercase;
     padding: 0;
+    font-family: "Abril Fatface", serif;
   }
   p {
     text-align: left;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     line-height: 1.5rem;
-    color: #0c0c0c77;
+    color: #0c0c0cc0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
   }
   li {
     list-style: none;

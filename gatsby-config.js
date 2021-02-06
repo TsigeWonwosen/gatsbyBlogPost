@@ -3,6 +3,7 @@ module.exports = {
     title: `Wonde BlogPost`,
     description: `Kick off your next, great Gatsby project with this default starter.`,
     author: `Wonde Shi`,
+    siteURL: "http://localhost:8000/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

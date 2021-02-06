@@ -1,4 +1,3 @@
-
 @import "base";
 
 .container {
@@ -34,12 +33,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-right: 1px solid rgba(231, 223, 223, 0.76);
+
     flex: 8;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f9f9fa;
-    border-radius: 10px;
     margin-right: 1rem;
 
     h4 {
@@ -52,11 +51,11 @@
   }
   .col2 {
     flex: 4;
-    background-color: #f9f9fa;
     padding-top: 2rem;
     padding-left: auto;
     padding-right: auto;
     padding-bottom: 1rem;
+
     width: 100%;
     height: 50%;
     display: flex;
@@ -104,7 +103,7 @@
   margin-right: auto;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background-color: rgba(249, 248, 251, 0.938);
+  background-color: rgb(255, 255, 255);
   text-decoration: none;
   position: relative;
   transition: all 0.5s ease-in-out;
@@ -146,8 +145,8 @@
         max-width: 50%;
       }
       span {
-        font-size: 0.8rem;
-        color: gray;
+        font-size: 0.87rem;
+        color: rgb(20, 20, 20);
       }
     }
   }
@@ -155,7 +154,10 @@
   &:hover .readMore {
     display: block;
   }
-
+  button {
+    border: none;
+    outline: none;
+  }
   .readMore {
     background-color: #1ccddaa1;
     color: #ffffff;

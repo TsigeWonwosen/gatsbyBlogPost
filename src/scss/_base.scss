@@ -19,8 +19,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgba(157, 156, 160, 0.219);
-  // overflow-x: hidden;
+  background-color: #f0f0f7;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -34,7 +33,8 @@ body {
   h2,
   h3,
   h4 {
-    color: #1a171783;
+    color: #292828c7;
+    letter-spacing: 2px;
     font-weight: 400;
     text-transform: uppercase;
     padding: 0;
@@ -42,9 +42,9 @@ body {
   }
   p {
     text-align: left;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     line-height: 1.5rem;
-    color: #0c0c0cc0;
+    color: #0c0c0cd5;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
   }

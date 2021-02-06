@@ -19,9 +19,9 @@ $headerColor: rgba(72, 66, 75, 0.699);
 
     span {
       padding-right: 1rem;
-      color: rgba(128, 128, 128, 0.514);
+      color: rgba(53, 51, 51, 0.925);
       font-size: 0.9rem;
-      font-weight: 400;
+      font-weight: 500;
     }
   }
   h3 {
@@ -80,10 +80,10 @@ Img {
     font-size: 1rem;
   }
   .single-page-container {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-.col2{
-  display: none;
-}
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  .col2 {
+    display: none;
+  }
 }

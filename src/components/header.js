@@ -13,6 +13,7 @@ const Header = ({ handleChange, open }) => {
   const [dropdown, setDropdown] = useState(false)
 
   const url = typeof window !== "undefined" ? window.location.href : ""
+  console.log("url : ", url)
 
   let headerStyle = ""
   if (

@@ -15,7 +15,10 @@ const Header = ({ handleChange, open }) => {
   const url = typeof window !== "undefined" ? window.location.href : ""
 
   let headerStyle = ""
-  if (url === "http://localhost:8000/") {
+  if (
+    url === "http://localhost:8000/" ||
+    url === "https://wonde-blog.netlify.app/"
+  ) {
     headerStyle = "header-container"
   } else {
     headerStyle = "header-container2"

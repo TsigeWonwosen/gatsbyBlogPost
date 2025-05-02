@@ -105,14 +105,12 @@ const Header = ({ handleChange, open }) => {
       <div className="nav-burger-close">
         {!open ? (
           <div className="nav-burger-menu">
-            <span className="menu open"> Menu</span>
             <button onClick={handleChange}>
               <FaBars />
             </button>
           </div>
         ) : (
           <div className="nav-burger-menu">
-            <h4 className="menu close">Close</h4>
             <button onClick={handleChange}>
               <CgClose />
             </button>

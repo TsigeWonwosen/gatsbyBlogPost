@@ -1,4 +1,4 @@
-@import "base";
+@use "base";
 $colorFooter: rgba(229, 227, 231, 0.808);
 
 footer {
@@ -18,7 +18,7 @@ footer {
   height: 100%;
   width: 100%;
   max-width: 1200px;
-  padding: 0rem 2rem ;
+  padding: 0rem 2rem;
   color: $colorFooter;
 }
 
@@ -71,7 +71,7 @@ footer {
   span {
     font-size: 13px;
     span {
-      color: $btnColor;
+      color: rgb(45, 118, 206);
     }
   }
 }

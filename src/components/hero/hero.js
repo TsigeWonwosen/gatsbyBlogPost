@@ -35,7 +35,7 @@ function Hero() {
 
   const handleClick = num => setValue(num)
 
-  const { id, title, name, url, subtitle, description } = data[imageIndex]
+  const { title, name, url, subtitle, description } = data[imageIndex]
   const fadeLeft = {
     hidden: { opacity: 0, x: -100 },
 
@@ -112,9 +112,12 @@ function Hero() {
           aria-label="Next Image"
           tabIndex={-2}
           className={`hero-btn ${imageIndex === 2 && "active"}`}
-          onClick={() => handleClick(2)}
-          onKeyDown={() => handleClick(2)}
-        ></div>
+        >
+          <button
+            onClick={() => handleClick(2)}
+            onKeyDown={() => handleClick(2)}
+          ></button>
+        </div>
       </div>
 
       <div

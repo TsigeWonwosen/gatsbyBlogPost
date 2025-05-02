@@ -11,6 +11,11 @@ function Dropdown() {
   return (
     <ul
       onClick={handleClick}
+      onKeyDown={e => {
+        if (e.key === "Enter" || e.key === " ") {
+          setClick(false)
+        }
+      }}
       className={click ? "dropdown-menu clicked" : "dropdown-menu"}
     >
       {click &&
@@ -21,6 +26,11 @@ function Dropdown() {
                 className={item.cName}
                 to={item.path}
                 onClick={() => setClick(false)}
+                onKeyDown={e => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    setClick(false)
+                  }
+                }}
               >
                 {item.title}
               </Link>

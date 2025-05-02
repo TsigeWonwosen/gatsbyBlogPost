@@ -2,8 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap");
 
-$color: #f3f3f3e7;
-$btnColor: rgba(38, 184, 201, 0.856);
+$primary-color: rgb(92, 85, 85);
+body {
+  color: $primary-color; // Variables now need namespace
+}
+
+$color: #f3f3f3e7 !default;
+$btnColor: rgba(38, 184, 201, 0.856) !default;
+$btnColorHover: rgba(38, 184, 201, 0.856) !default;
 
 *,
 *::before,
@@ -33,20 +39,20 @@ body {
   h2,
   h3,
   h4 {
-    color: #292828c7;
-    letter-spacing: 2px;
-    font-weight: 400;
-    text-transform: uppercase;
+    color: #16171b;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: capitalize;
     padding: 0;
     font-family: "Abril Fatface", serif;
   }
   p {
     text-align: left;
-    font-size: 0.98rem;
-    line-height: 1.5rem;
-    color: #0c0c0cd5;
+    font-size: 17px;
+    line-height: 30px;
+    color: rgb(74, 77, 87);
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
   }
   li {
     list-style: none;

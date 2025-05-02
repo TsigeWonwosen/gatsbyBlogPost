@@ -2,8 +2,9 @@ $borderRadius: 0.2rem;
 $headerColor: rgba(72, 66, 75, 0.699);
 
 .single-page-container {
-  margin-top: 6rem;
-  margin-bottom: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  max-width: 1280px;
 }
 .title-singlePage {
   display: flex;

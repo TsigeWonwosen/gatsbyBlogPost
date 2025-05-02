@@ -15,11 +15,13 @@ export default function sideBarSinglePost({ title, date, fluid, slug }) {
             objectPosition="50% 50%"
             alt="computer"
           />
-          <div className="sideBare-title">
-            <h3>{title}</h3>
-            <span>{date}</span>
+          <div className="sideBare-content">
+            <div className="sideBare-title">
+              <h3>{title}</h3>
+              <span>{date}</span>
+            </div>
+            <button className="readMoreSide">Read More</button>
           </div>
-          <button className="readMoreSide">Read More</button>
         </div>
       </div>
     </Link>

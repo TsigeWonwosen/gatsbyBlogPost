@@ -13,27 +13,38 @@ function sideMenu({ active, handleChange }) {
           <SocialLink />
         </div>
       </div>
-      <ul className="sideBar-nav-links" onClick={handleChange}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-
-        <li>
-          <Link to="/team">Teams</Link>
-        </li>
-        <li>
-          <Link to="/task">Tags</Link>
-        </li>
-        <li className="contact-sideMenu">
-          {" "}
-          <Link to="/contact"> 🇪🇹 Contact</Link>
-        </li>
+      <ul className="sideBar-nav-links">
+        {navLists.map((item, index) => {
+          return (
+            <li key={index}>
+              <Link to={item.url}>
+                <button
+                  type="button"
+                  onClick={handleChange}
+                  onKeyDown={e => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      handleChange()
+                      e.preventDefault()
+                    }
+                  }}
+                  className="nav-link-button"
+                >
+                  {item.name}
+                </button>
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )
 }
 
 export default sideMenu
+
+const navLists = [
+  { url: "/", name: "Home" },
+  { url: "/about", name: "About" },
+  { url: "/team", name: "Teams" },
+  { url: "/task", name: "Tags" },
+]

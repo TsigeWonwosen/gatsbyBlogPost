@@ -1,13 +1,13 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import "../scss/about.scss"
 
 const About = () => (
   <Layout>
-    <SEO title="About" />
+    <Seo title="About" />
     <div className="main-container">
       <h1>About Page!</h1>
       <div className="underline"></div>

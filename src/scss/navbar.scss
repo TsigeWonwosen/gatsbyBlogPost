@@ -1,4 +1,5 @@
-@import "base";
+@use 'sass:color';
+@use '../scss/base' as vars;
 
 .header-container {
   margin-top: -1px;
@@ -14,9 +15,9 @@
 
   z-index: 1000;
   .header {
+    max-width: 1280px;
+    padding: 0 1.3rem;
     margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 1200px;
     height: 100%;
     display: flex;
     text-align: center;
@@ -44,12 +45,10 @@
   );
   height: 80px;
   width: 100vw;
-
   z-index: 1000;
   .header {
     margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 1200px;
+    max-width: 1280px;
     height: 100%;
     display: flex;
     text-align: center;
@@ -66,7 +65,7 @@
   height: 100%;
   padding: 0.3rem 0.4rem;
   margin: auto;
-  color: lighten($color, 4);
+  color: color.adjust(vars.$color, $lightness: 4%);
   border-top: 1px solid rgba(255, 255, 255, 0.705);
   border-bottom: 3px solid rgba(255, 255, 255, 0.705);
   border-right: 9px solid rgba(255, 255, 255, 0.705);
@@ -78,7 +77,7 @@
   font-weight: bold;
   transition: all 0.5sec ease-in-out;
   &:hover {
-    color: lighten($color, 10%);
+    // color: lighten($color, 10%);
     transform: scaleY(1.02);
     box-shadow: 2px 15px 30px rgba(12, 12, 12, 0.255);
   }
@@ -93,7 +92,7 @@
   position: relative;
 }
 .logo span {
-  color: $btnColor;
+  color: vars.$btnColor;
   font-size: 1.4rem;
   display: flex;
   justify-content: center;
@@ -110,7 +109,7 @@
   .nav-link {
     position: relative;
     box-sizing: border-box;
-    color: $color;
+    color: vars.$color;
     text-decoration: none;
     display: flex;
     line-height: 2.5rem;
@@ -142,7 +141,7 @@
       width: 100%;
       transform: scaleX(1);
       transform: border 0.4s;
-      border-bottom: 3px solid $btnColor;
+      border-bottom: 3px solid vars.$btnColor;
     }
 
     &.active-link {
@@ -150,26 +149,27 @@
       transform-origin: 110% 100%;
       width: 100%;
       height: 52%;
-      border-bottom: 3px solid $btnColor;
+      border-bottom: 3px solid vars.$btnColor;
     }
   }
 
   .contact {
-    color: $color;
+    color: vars.$color;
     margin-left: 0.4rem;
     border-radius: 5px;
     padding: 0.3rem 0.4rem;
-    background-color: $btnColor;
+    background-color: vars.$btnColor;
     border-bottom: 4px solid transparent;
     box-shadow: -2px 4px 30px rgba(255, 255, 255, 0.193);
     transition: all 0.5sec ease-in-out;
 
     &:hover {
-      color: lighten($color, 20%);
+      color: color.adjust(vars.$color, $lightness: 20%);
       border-radius: 5px;
-      border-bottom: 4px solid $btnColor;
+      border-bottom: 4px solid vars.$btnColor;
       padding: 0.3rem 0.4rem;
-      background-color: lighten($btnColor, 10%);
+      // background-color: lighten($btnColor, 10%);
+
       box-shadow: -2px 4px 50px rgba(255, 255, 255, 0.493);
     }
   }
@@ -208,12 +208,12 @@
     display: grid;
     place-items: center;
     background-color: transparent;
-    color: $btnColor;
+    color: vars.$btnColor;
     border: none;
     font-size: 20px;
     font-weight: bold;
     outline: none;
-    border: 1px solid $btnColor;
+    border: 1px solid vars.$btnColor;
     border-radius: 10px;
     padding: 0.3rem;
     transition: 0.5s;

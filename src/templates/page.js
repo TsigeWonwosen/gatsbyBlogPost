@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import SideBar from "../components/sideBar"
 import "../scss/singlePage.scss"
 
@@ -20,7 +20,7 @@ const PageTemplate = ({ data }) => {
   } = frontmatter
   return (
     <Layout>
-      <SEO title={title} />
+      <Seo title={title} />
       <div className="row single-page-container">
         <div className="col1">
           <div className="title-singlePage">

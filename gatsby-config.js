@@ -31,9 +31,25 @@ module.exports = {
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"), // Explicitly use Dart Sass
+        sassOptions: {
+          // Modern Sass configuration
+          quietDeps: true, // Optional: suppress deprecation warnings
+          logger: {
+            // Optional: customize warning output
+            warn: (message, options) => {
+              if (!options.deprecation) console.warn(message)
+            },
+          },
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Teams = () => (
   <Layout>
-    <SEO title="Teams" />
+    <Seo title="Teams" />
     <div className="main-container">
       <h1>Teams Page!</h1>
       <div className="underline"></div>

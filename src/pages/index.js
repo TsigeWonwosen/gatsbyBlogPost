@@ -1,10 +1,8 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
-// import { Location } from "@reach/router"
-
 import Layout from "../components/layout"
 import SideBar from "../components/sideBar"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Post from "../components/post.js"
 import Hero from "../components/hero/hero.js"
 
@@ -26,59 +24,58 @@ const IndexPage = ({ data }) => {
   const { allMarkdownRemark } = data
 
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Layout style={{ minHeight: "100vh", width: "100vw" }}>
-        <SEO title="Home" />
-        <Hero />
-        <section className="container">
-          <div id="home" className="home-title-1">
-            <h2>Home</h2>
-            <div className="underline"></div>
-          </div>
-          <div className="row">
-            <div className="col1">
-              <h4>New Blogs</h4>
-              <ul style={{ listStyle: "none" }}>
-                {allMarkdownRemark.edges.map(
-                  ({
-                    node: {
-                      excerpt,
-                      id,
-                      fields: { slug },
-                      frontmatter: {
-                        title,
-                        date,
-                        image: {
-                          childImageSharp: { fluid },
-                        },
+    <Layout style={{ minHeight: "100vh", width: "100vw" }}>
+      <Seo title="Home" />
+      <Hero />
+      <section className="container">
+        <div id="home" className="home-title-1">
+          <h2>Home</h2>
+          <div className="underline"></div>
+        </div>
+        <div className="row">
+          <div className="col1">
+            <ul className="blog-post-container">
+              {allMarkdownRemark.edges.map(
+                ({
+                  node: {
+                    excerpt,
+                    id,
+                    fields: { slug },
+                    frontmatter: {
+                      title,
+                      date,
+                      author,
+                      image: {
+                        childImageSharp: { fluid },
                       },
                     },
-                  }) => (
-                    <li key={id} data-aos="zoom-in-up" data-aos-duration="1000">
-                      <Post
-                        title={title}
-                        date={date}
-                        body={excerpt}
-                        slug={slug}
-                        fluid={fluid}
-                      />
-                    </li>
-                  )
-                )}
-              </ul>
+                  },
+                }) => (
+                  <li key={id}>
+                    <Post
+                      title={title}
+                      date={date}
+                      body={excerpt}
+                      slug={slug}
+                      fluid={fluid}
+                      author={author}
+                    />
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+          <div className="col2">
+            <div className="popular-blog">
+              <SideBar />
             </div>
-            <div className="col2" data-aos="fade-left" data-aos-duration="750">
-              <div className="popular-blog">
-                <SideBar />
-              </div>
-              <div className="advert">
-                <h4>Advertisement </h4>
-              </div>
+            <div className="advert">
+              <h4>Advertisement </h4>
             </div>
           </div>
-        </section>
-      </Layout>
-    </AnimatePresence>
+        </div>
+      </section>
+    </Layout>
   )
 }
 
@@ -90,6 +87,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
+            author
             date(formatString: "MMM Do, YYYY")
             image {
               childImageSharp {

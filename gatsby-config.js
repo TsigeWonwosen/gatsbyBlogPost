@@ -31,7 +31,8 @@ module.exports = {
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
+    `gatsby-plugin-image`,
+    `gatsby-wordpress-inline-images`,
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-remark`,
     {

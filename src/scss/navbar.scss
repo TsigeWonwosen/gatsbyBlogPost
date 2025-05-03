@@ -47,6 +47,7 @@
   width: 100vw;
   z-index: 1000;
   .header {
+    padding: 0 1.5rem;
     margin: 0 auto;
     max-width: 1280px;
     height: 100%;
@@ -183,7 +184,7 @@
   animation: fadeIn 0.5s ease-in-out;
 
   .menu {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
     animation: fadeIn 0.5s ease-in-out;
@@ -199,10 +200,10 @@
 .nav-burger-close {
   z-index: 3;
   position: absolute;
-  top: 70px;
+  top: 50%;
   right: 50px;
   display: none;
-  transform: translateY(-50px);
+  transform: translateY(-50%);
 
   button {
     display: grid;
@@ -210,12 +211,9 @@
     background-color: transparent;
     color: vars.$btnColor;
     border: none;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     outline: none;
-    border: 1px solid vars.$btnColor;
-    border-radius: 10px;
-    padding: 0.3rem;
     transition: 0.5s;
     cursor: pointer;
 

@@ -14,6 +14,8 @@ import "../scss/social-link.scss"
 import { AnimatePresence } from "framer-motion"
 
 import "./../scss/blog-post.scss"
+import RecommendedTopic from "../components/recommendedTopic.js"
+import FollowSuggestions from "../components/FollowSuggestions.js"
 const IndexPage = ({ data }) => {
   useEffect(() => {
     AOS.init({
@@ -70,7 +72,10 @@ const IndexPage = ({ data }) => {
               <SideBar />
             </div>
             <div className="advert">
-              <h4>Advertisement </h4>
+              <RecommendedTopic />
+            </div>
+            <div className="follow-suggestions-container">
+              <FollowSuggestions />
             </div>
           </div>
         </div>

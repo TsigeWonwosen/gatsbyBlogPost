@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 import "../scss/blog-post.scss"
-import { Ellipsis, MessageCircleMore, Sparkles, ThumbsUp } from "lucide-react"
 
 export default function SideBarCard({
   title,

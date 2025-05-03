@@ -50,7 +50,7 @@ export const sideBarQuery = graphql`
   query SideQuery {
     allMarkdownRemark(
       filter: { frontmatter: { published: { eq: true } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
       limit: 2
     ) {
       edges {

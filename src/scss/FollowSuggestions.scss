@@ -1,0 +1,96 @@
+.follow-suggestions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.follow-suggestions {
+  border-radius: 16px;
+  padding: 12px;
+  margin: 16px 0;
+  width: 350px;
+}
+
+.suggestions-title {
+  font-size: 16px;
+  text-align: left;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+  color: rgb(51, 49, 49);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.suggestion-card {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  justify-items: flex-start;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.suggestion-card:last-child {
+  border-bottom: none;
+}
+
+.user-avatar {
+  margin-right: 10px;
+}
+
+.avatar-initial {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #7ab1d6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.user-info {
+  flex: 1;
+  text-align: left;
+}
+
+.user-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f1419;
+}
+
+.user-handle {
+  color: #536471;
+  font-size: 10px;
+  margin-bottom: 16px;
+}
+
+.user-description {
+  color: rgb(107, 107, 107);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  white-space: pre-line;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.follow-button {
+  border: 0.7px solid #696d719a;
+  background: transparent;
+  color: #6a7075;
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.follow-button:hover {
+  color: #272c30;
+}

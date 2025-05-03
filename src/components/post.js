@@ -16,10 +16,13 @@ export default function Post({ title, author, date, body, fluid, slug }) {
           objectPosition="50% 50%"
           alt="computer"
         />
-        <div className="post-date">
+        <div className="post-data">
+          <div className="user-avatar">
+            <div className="avatar-initial">{author.charAt(0)}</div>
+            <span>{author}</span>
+          </div>
           <div className="post-title">
             <h3>{title}</h3>
-            <span>{author}</span>
           </div>
           <div>{body && <p>{body}</p>}</div>
           <div className="post-buttons">

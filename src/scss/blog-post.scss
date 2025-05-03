@@ -7,7 +7,7 @@
   align-items: center;
   width: 100%;
   max-width: 1280px;
-  margin: 6rem auto 2rem;
+  margin: 4rem auto 2rem;
   padding: 0rem 1rem;
   color: rgb(12, 12, 12);
 }
@@ -140,9 +140,9 @@
 
     .post-img {
       border-radius: 3px;
-      max-height: 200px;
-      width: 250px;
-      height: 100%;
+      max-height: 150px;
+      max-width: 200px;
+      width: 100%;
       object-fit: cover;
       object-position: center;
       opacity: 0.9;
@@ -197,7 +197,7 @@
       h3 {
         font-size: 1.1rem;
         max-width: 90%;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Times New Roman", Times, serif;
         color: #242424;
       }
       span {
@@ -207,7 +207,7 @@
     }
     p {
       font-size: 0.9rem;
-      color: rgb(112, 115, 125);
+      color: rgb(189, 192, 204);
       font-weight: 400;
       font-family: "Nunito Sans", sans-serif;
       font-size: 16px;
@@ -288,7 +288,7 @@
     box-sizing: border-box;
     .col1 {
       width: 100%;
-      margin-right: 0;
+      margin: 0 auto;
       ul {
         margin: 0 auto;
       }
@@ -348,6 +348,48 @@
     .post-data {
       max-width: 100%;
       width: 100%;
+    }
+  }
+  .col1 {
+    .Blog-post {
+      gap: 0.5rem !important;
+      .post-data {
+        margin: 0 auto;
+        gap: 0.7rem;
+
+        .post-title {
+          height: auto;
+          h3 {
+            font-size: 0.7rem;
+            font-weight: 600;
+          }
+          span {
+            font-size: 0.8rem;
+            color: gray;
+          }
+        }
+      }
+      .post-img {
+        margin-top: 2rem;
+        max-width: 100px;
+        height: auto;
+        align-self: flex-start;
+      }
+      p {
+        color: rgb(112, 115, 125);
+        font-weight: 400;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 12px;
+        margin-top: 0.6rem !important;
+        line-height: 1.2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Change this to the number of lines you want */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .post-buttons {
+        margin-top: 0.5rem;
+      }
     }
   }
 }

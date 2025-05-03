@@ -64,13 +64,7 @@ function Hero() {
   return (
     <div className="hero">
       <img src={url} alt={name} className="hero-image" />
-      <motion.section
-        initial="in"
-        animate="out"
-        exit="end"
-        variants={animationThree}
-        className="hero-header"
-      >
+      <section className="hero-header">
         <h3> {subtitle}</h3>
         <motion.h1
           variants={fadeLeft}
@@ -89,7 +83,7 @@ function Hero() {
             <IoIosArrowRoundForward className="btn-arrow" />
           </button>
         </Link>
-      </motion.section>
+      </section>
       <div className="hero-btn-container">
         <div
           role="button"
@@ -112,12 +106,9 @@ function Hero() {
           aria-label="Next Image"
           tabIndex={-2}
           className={`hero-btn ${imageIndex === 2 && "active"}`}
-        >
-          <button
-            onClick={() => handleClick(2)}
-            onKeyDown={() => handleClick(2)}
-          ></button>
-        </div>
+          onClick={() => handleClick(2)}
+          onKeyDown={() => handleClick(2)}
+        ></div>
       </div>
 
       <div

@@ -3,10 +3,13 @@
 .hero {
   width: 100%;
   height: 100vh;
+  max-height: 500px;
+  position: relative;
   object-fit: cover;
   overflow-x: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   .hero-header {
     position: relative;
@@ -15,27 +18,28 @@
     width: 100%;
     margin: 0rem auto;
     padding: 0 2rem;
-    max-width: 1200px;
+    max-width: 1280px;
+    max-height: 500px;
+
     z-index: 20;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     h1 {
-      color: #ffffffd0;
-      font-family: "Source Serif Pro", serif;
-      // color: set-text-color(#484A69);
+      color: #f4ededee;
       font-weight: 800;
       margin-top: clamp(0.5rem, 0.8rem, 0.7rem);
       margin-bottom: clamp(0.7rem, 1rem, 1.1rem);
       font-size: calc(10px + 1.4vw);
     }
     h3 {
-      color: #ffffffc0;
+      color: #2caeba;
       font-size: calc(7px + 0.8vw);
     }
     p {
       max-width: 55%;
-      color: #ffffffad;
+      color: #f0e9e9;
     }
     .contact-btn {
       background: var(--clr-primary-5);
@@ -61,7 +65,6 @@
       transition: box-shadow 0.3s ease;
       &:hover {
         box-shadow: 1px 10px 60px 30px rgba(14, 13, 13, 0.2);
-        // background-color: lighten($btnColor, 10%);
       }
     }
   }
@@ -74,9 +77,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+  max-height: 500px;
   object-position: bottom center;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.8;
   overflow-x: hidden;
   transform: 0.6s ease-in-out;
 }
@@ -85,19 +89,20 @@
   content: " ";
   width: 100%;
   height: 100vh;
+  max-height: 500px;
   position: absolute;
   top: 0;
   left: 0;
   background: linear-gradient(
     to right,
-    rgba(2, 15, 39, 0.89),
+    rgba(3, 10, 22, 0.89),
     rgba(52, 52, 163, 0.137)
   );
 }
 
 .hero-btn-container {
   position: absolute;
-  bottom: 70px;
+  bottom: 60px;
   left: 50%;
   display: flex;
   z-index: 40;
@@ -125,7 +130,7 @@
 .btn-arrow {
   margin-left: 7px;
   font-size: 26px;
-  color: #e9e1e1;
+  color: #f1ecec;
   z-index: 40;
 }
 
@@ -189,8 +194,46 @@
 }
 @media (max-width: 900px) {
   .hero {
+    width: 100%;
     .hero-header {
-      padding-left: 3.3rem;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0rem;
+      margin: 0rem;
+
+      h1 {
+        color: #f4ededee;
+        font-weight: 800;
+        margin-top: clamp(0.5rem, 0.8rem, 0.7rem);
+        margin-bottom: clamp(0.7rem, 1rem, 1.1rem);
+        font-size: calc(10px + 1.4vw);
+      }
+      p {
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+        color: white !important;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Change this to the number of lines you want */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5rem;
+      }
+      h3 {
+        color: #2caeba;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+        width: 100%;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+      }
+      h1 {
+        color: white;
+        font-size: 17px;
+      }
     }
   }
   .hero-image {

@@ -3,37 +3,83 @@
   width: 100%;
   flex-direction: column;
   justify-content: center;
+  padding: 1rem 1rem;
+  gap: 1rem;
   h4 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #393737;
+    font-weight: 600;
   }
 
-  .readMoreSide {
-    background-color: #1ccddaa1;
-    color: #ffffff;
-    border-radius: 15px;
-    position: absolute;
-    display: none;
-    right: 1.1rem;
-    bottom: 8px;
-    padding: 0.3rem 0.4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 14px;
-    box-shadow: -5px -15px 15px rgba(255, 255, 255, 0.2),
-      5px 15px 15px rgba(0, 0, 0, 0.1),
-      inset -5px -5px 5px rgba(255, 255, 255, 0.2),
-      inset 5px 5px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    &:hove {
-      color: #ffffff;
+  .Blog-post {
+    border: 1px solid rgba(101, 96, 96, 0.255);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    padding: 0.5rem !important;
+  }
+  .post-date {
+    padding: 0.5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+
+    .post-title {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.5rem;
+      h3 {
+        font-size: 0.8rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #242424;
+      }
+      span {
+        font-size: 0.7rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: gray;
+        font-weight: 400;
+      }
+    }
+
+    .post-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      color: gray;
     }
   }
-  .Blog-post {
-    &:hover .readMoreSide {
-      display: block;
+  .post-buttons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    p {
+      font-size: 0.8rem;
+      color: rgb(112, 115, 125);
+      font-weight: 400;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 16px;
+      margin-top: 0.5rem;
+      line-height: 1.5rem;
+      max-width: 100%;
+      background: #2c785b;
     }
   }
 }

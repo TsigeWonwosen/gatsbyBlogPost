@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Post from "./sideBarSinglePost"
 import "../scss/side-post.scss"
+import SideBarCard from "./sideBarCard"
 const SideBar = () => {
   const {
     allMarkdownRemark: { edges },
@@ -11,10 +11,11 @@ const SideBar = () => {
     <div className="side-bar">
       <h4>Recent Blogs</h4>
 
-      <ul>
+      <ul className="side-bar-list">
         {edges.map(
           ({
             node: {
+              excerpt,
               id,
               fields: { slug },
               frontmatter: {
@@ -27,7 +28,13 @@ const SideBar = () => {
             },
           }) => (
             <li key={id}>
-              <Post title={title} date={date} fluid={fluid} slug={slug} />
+              <SideBarCard
+                title={title}
+                date={date}
+                fluid={fluid}
+                slug={slug}
+                body={excerpt}
+              />
             </li>
           )
         )}
@@ -54,6 +61,7 @@ export const sideBarQuery = graphql`
           }
           frontmatter {
             title
+
             date(formatString: "MMM DD, YYYY")
             image {
               childImageSharp {

@@ -1,4 +1,4 @@
-const authors = [
+export const authors = [
   {
     name: "Wonde Shi",
     imageUrl: "wonde.jpg",
@@ -12,7 +12,7 @@ const authors = [
     name: "Jone Michele",
     imageUrl: "wonde.jpg",
     bio:
-      "Wonde is a Back-end Developer, has more than 5 years working experiences ",
+      "Jone is a Back-end Developer, has more than 5 years working experiences ",
     facebook: "https://www.facebook.com/wondeshi",
     twitter: "https://www.twitter.com/wondeshi",
     linkedin: "https://www.linkedin.com/wondeshi",
@@ -22,7 +22,7 @@ const authors = [
     name: "John Deo",
     imageUrl: "johndeo.jpg",
     bio:
-      "Wonde is a Front-end Developer, has more than 2 years working experiences ",
+      "John is a Front-end Developer, has more than 2 years working experiences ",
     facebook: "https://www.facebook.com/johndeo",
     twitter: "https://www.twitter.com/johndeo",
     linkedin: "https://www.linkedin.com/johndeo",

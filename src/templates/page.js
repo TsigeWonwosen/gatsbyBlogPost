@@ -6,6 +6,8 @@ import SideBar from "../components/sideBar"
 import "../scss/singlePage.scss"
 
 import Img from "gatsby-image"
+import PostInfo from "../components/postInfo"
+// import { authors } from "./authors"
 
 const PageTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -18,6 +20,7 @@ const PageTemplate = ({ data }) => {
       childImageSharp: { fluid },
     },
   } = frontmatter
+
   return (
     <Layout>
       <Seo title={title} />
@@ -26,25 +29,33 @@ const PageTemplate = ({ data }) => {
           <div className="title-singlePage">
             <h3>{title}</h3>
             <div className="blog-author">
-              <span>{author}</span>
-              <span>{date}</span>
+              <div className="author-img">
+                <span className="profile-img">{author.charAt(0)}</span>
+                <span className="author">{author}</span>
+                <button className="follow">Follow</button>
+              </div>
+              <div className="date-container">
+                <span className="read-time">10 mins read.</span>
+                <span className="date">{date}</span>
+              </div>
             </div>
+            <PostInfo date={date} />
           </div>
-          <section className="single-product">
-            <article>
+          <section className="single-post-container">
+            <div className="single-post-img">
               <Img
                 fluid={fluid}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt="computer"
+                className={"post-hero-img"}
               />
-            </article>
-            <article>
-              <div
-                className="blog-container"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-            </article>
+              <p>Image from google.</p>
+            </div>
+            <div
+              className="blogContainer"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </section>
         </div>
         <div className="col2">

@@ -27,7 +27,7 @@ export default function Post({ title, author, date, body, fluid, slug }) {
           <div>{body && <p>{body}</p>}</div>
           <div className="post-buttons">
             <section className="post-left">
-              <Sparkles size={"16px"} />
+              <Sparkles size={"16px"} style={{ color: "#FFEDBB" }} />
               <span>{date}</span>
               <div className="post-comment">
                 <ThumbsUp size={"14px"} />

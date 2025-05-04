@@ -17,15 +17,14 @@
     align-items: center;
     width: 100%;
     margin: 0rem auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     max-width: 1280px;
     max-height: 500px;
-
     z-index: 20;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
     h1 {
       color: #f4ededee;
       font-weight: 800;
@@ -34,12 +33,13 @@
       font-size: calc(10px + 1.4vw);
     }
     h3 {
-      color: #2caeba;
+      color: #20afbc;
       font-size: calc(7px + 0.8vw);
     }
     p {
       max-width: 55%;
-      color: #f0e9e9;
+      color: rgb(213, 209, 209);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
     }
     .contact-btn {
       background: var(--clr-primary-5);
@@ -140,12 +140,12 @@
   align-items: center;
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 18px;
   translate: translateY(-50%);
-  color: #ffffff;
-  font-size: 29px;
+  color: #dbd3d3;
+  font-size: 20px;
   font-weight: bold;
-  background-color: #ffffff79;
+  background-color: #ffffff30;
   padding: 10px;
   border-radius: 50%;
   outline: none;
@@ -158,13 +158,12 @@
   align-items: center;
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 18px;
   translate: translateY(-50%);
-
-  color: #ffffff;
-  font-size: 29px;
+  color: #d5c6c6;
+  font-size: 20px;
   font-weight: bold;
-  background-color: #ffffff79;
+  background-color: #ffffff3d;
   padding: 10px;
   border-radius: 50%;
   outline: none;
@@ -213,8 +212,9 @@
         width: 100% !important;
         margin: 0;
         padding: 0;
-        color: white !important;
+        color: rgb(230, 222, 222) !important;
         text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         display: -webkit-box;
         -webkit-line-clamp: 3; /* Change this to the number of lines you want */
         -webkit-box-orient: vertical;

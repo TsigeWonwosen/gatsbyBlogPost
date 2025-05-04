@@ -78,7 +78,7 @@
   font-weight: bold;
   transition: all 0.5sec ease-in-out;
   &:hover {
-    // color: lighten($color, 10%);
+    color: lighten(vars.$color, 10%);
     transform: scaleY(1.02);
     box-shadow: 2px 15px 30px rgba(12, 12, 12, 0.255);
   }
@@ -101,12 +101,18 @@
 }
 .navBar {
   height: 100%;
-  width: 40%;
+  width: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  gap: 1rem;
+  background: #00000018;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.193);
+
   .nav-link {
     position: relative;
     box-sizing: border-box;
@@ -123,6 +129,7 @@
     height: 50%;
     outline: none;
     border-bottom: 2px solid transparent;
+    background: transparent;
     z-index: 100;
 
     &:after {
@@ -201,7 +208,7 @@
   z-index: 3;
   position: absolute;
   top: 50%;
-  right: 50px;
+  right: 1.7rem;
   display: none;
   transform: translateY(-50%);
 
@@ -209,7 +216,8 @@
     display: grid;
     place-items: center;
     background-color: transparent;
-    color: vars.$btnColor;
+    // color: vars.$btnColor;
+    color: rgba(218, 211, 211, 0.878);
     border: none;
     font-size: 24px;
     font-weight: bold;

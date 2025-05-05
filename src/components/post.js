@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-import * as styles from "../scss/blogPost.module.scss"
+import * as styles from "../scss/post.module.scss"
 import PostInfo from "./postInfo"
 
 export default function Post({ title, author, date, body, fluid, slug }) {
@@ -24,7 +24,7 @@ export default function Post({ title, author, date, body, fluid, slug }) {
           <div className={styles.postTitle}>
             <h3>{title}</h3>
           </div>
-          <div>{body && <p>{body}</p>}</div>
+          <div className={styles.postBody}>{body && <p>{body}</p>}</div>
           <PostInfo date={date} />
         </div>
       </div>

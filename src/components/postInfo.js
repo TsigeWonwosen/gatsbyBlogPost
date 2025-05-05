@@ -1,6 +1,6 @@
 import React from "react"
 import { Ellipsis, MessageCircleMore, Sparkles, ThumbsUp } from "lucide-react"
-import * as styles from "../scss/blogPost.module.scss"
+import * as styles from "../scss/postInfo.module.scss"
 
 function PostInfo({ date }) {
   return (

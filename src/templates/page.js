@@ -25,7 +25,7 @@ const PageTemplate = ({ data }) => {
     <Layout>
       <Seo title={title} />
       <div className={styles.singlePageContainer}>
-        <div className="col1">
+        <div className={styles.col1}>
           <div className={styles.titleSinglePage}>
             <h3>{title}</h3>
             <div className={styles.blogAuthorContainer}>

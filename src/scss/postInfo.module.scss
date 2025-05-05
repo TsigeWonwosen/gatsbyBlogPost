@@ -1,0 +1,65 @@
+.postInfoContainer {
+  width: 95%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+
+  .postLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: gray;
+    border: none !important;
+    background: transparent;
+    width: auto;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    .postComment,
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      height: 100%;
+      padding: 0rem;
+      margin: 0rem;
+      color: gray;
+    }
+    .postLike {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgb(113, 134, 137);
+      font-weight: 400;
+      margin: 0rem !important;
+      padding: 0rem;
+      height: 100%;
+      width: auto;
+    }
+  }
+  .postRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: gray;
+    border: none !important;
+    background: transparent !important;
+    width: auto;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

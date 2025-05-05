@@ -1,5 +1,5 @@
 import React from "react"
-import * as styles from "../scss/blogPost.module.scss"
+import * as styles from "../scss/recommendedTopic.module.scss"
 
 function RecommendedTopic() {
   return (

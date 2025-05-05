@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wonde BlogPost`,
-    description: `Kick off your next, great Gatsby project with this default starter.`,
+    description: `Technology based blog posts.`,
     author: `Wonde Shi`,
     siteURL: "http://localhost:8000/",
   },
@@ -28,7 +28,20 @@ module.exports = {
         path: `${__dirname}/src/components/hero`,
       },
     },
-
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              showLineNumbers: true,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,

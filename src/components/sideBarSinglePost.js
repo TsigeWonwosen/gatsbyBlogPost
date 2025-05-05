@@ -1,7 +1,7 @@
 import React from "react"
-import "../scss/blog-post.scss"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import * as styles from "../scss/singlePage.module.scss"
 
 export default function sideBarSinglePost({ title, date, fluid, slug }) {
   return (

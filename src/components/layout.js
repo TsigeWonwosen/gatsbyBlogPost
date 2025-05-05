@@ -6,7 +6,7 @@ import Header from "./header"
 import Footer from "./footer"
 import SideMenu from "./sideMenu"
 
-import "../scss/blog-post.scss"
+// import "../scss/blog-post.scss"
 
 const Layout = ({ children }) => {
   const [open, setOpen] = React.useState(false)
@@ -25,7 +25,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  
   return (
     <div
       style={{

@@ -12,7 +12,7 @@
   color: rgb(12, 12, 12);
 }
 
-.home-title-1 {
+.homeTitle1 {
   max-width: 200px;
   position: relative;
 }
@@ -64,7 +64,7 @@
     height: 50%;
     border-radius: 10px;
 
-    .popular-blog {
+    .popularBlog {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -93,7 +93,7 @@
         margin-bottom: 1rem;
       }
 
-      .recommended-topics {
+      .recommendedTopics {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -103,21 +103,21 @@
         list-style-type: none;
         padding: 0;
       }
-      .topic-item {
+      .topicItem {
         background-color: #f0f0f0;
         margin: 5px 0;
         padding: 5px 6px;
         border-radius: 5px;
         cursor: pointer;
       }
-      .topic-item:hover {
+      .topicItem:hover {
         background-color: #e0e0e0;
       }
     }
   }
 }
 
-.blog-post-container {
+.blogPostContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,7 +127,7 @@
   max-width: 1280px;
   padding: 1rem 0rem;
 }
-.Blog-post {
+.BlogPost {
   width: 100%;
   height: auto;
   display: flex;
@@ -140,7 +140,7 @@
   border-bottom: 1px solid rgba(231, 223, 223, 0.419);
 }
 
-.post-img {
+.postImg {
   border-radius: 3px;
   max-height: 150px;
   max-width: 200px;
@@ -154,10 +154,10 @@
     opacity: 1;
   }
 }
-.post-data {
+.postData {
   max-width: 70%;
 }
-.user-avatar {
+.userAvatar {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -173,7 +173,7 @@
   }
 }
 
-.avatar-initial {
+.avatarInitial {
   width: 18px;
   height: 18px;
   border-radius: 4px;
@@ -186,7 +186,7 @@
   font-size: 11px;
 }
 
-.post-title {
+.postTitle {
   width: 100%;
   height: 33px;
   line-height: 1.2rem;
@@ -210,16 +210,19 @@
 }
 p {
   font-size: 0.8rem;
-  color: rgb(135, 137, 143);
+  color: rgb(12, 12, 12) !important;
   font-weight: 400;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 16px;
   margin-top: 0.5rem;
   line-height: 1.5rem;
   max-width: 98%;
+  font-style: normal !important;
 }
 
-.post-buttons {
+.postInfoContainer {
   width: 95%;
   height: 30px;
   display: flex;
@@ -228,7 +231,7 @@ p {
   text-align: center;
   margin-top: 1rem;
 
-  .post-left {
+  .postLeft {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +246,7 @@ p {
     text-decoration: none;
     cursor: pointer;
 
-    .post-comment,
+    .postComment,
     span {
       display: flex;
       justify-content: center;
@@ -255,7 +258,7 @@ p {
       margin: 0rem;
       color: gray;
     }
-    .post-like {
+    .postLike {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -269,7 +272,7 @@ p {
       width: auto;
     }
   }
-  .post-right {
+  .postRight {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,13 +319,13 @@ p {
     }
   }
 
-  .Blog-post {
+  .BlogPost {
     width: 100%;
     height: auto;
     padding: 1rem rem;
     gap: 1rem;
 
-    .post-title {
+    .postTitle {
       h3 {
         margin: 0;
         font-size: 0.8rem;
@@ -335,7 +338,7 @@ p {
       }
     }
   }
-  .post-img {
+  .postImg {
     border-radius: 3px;
     height: 100%;
     max-height: 200px;
@@ -349,29 +352,29 @@ p {
   .col2 {
     flex-direction: column !important;
 
-    .Blog-post {
+    .BlogPost {
       flex-direction: column !important;
       align-items: center;
       justify-content: center;
     }
-    .post-img {
+    .postImg {
       max-width: 100%;
       height: auto;
     }
-    .post-data {
+    .postData {
       max-width: 100%;
       width: 100%;
     }
   }
   .col1 {
-    .Blog-post {
+    .BlogPost {
       gap: 0.5rem !important;
 
-      .post-data {
+      .postData {
         margin: 0 auto;
         gap: 0.7rem;
 
-        .post-title {
+        .postTitle {
           height: auto;
           h3 {
             font-size: 0.7rem;
@@ -382,11 +385,11 @@ p {
             color: gray;
           }
         }
-        .post-right {
+        .postRight {
           display: none;
         }
       }
-      .post-img {
+      .postImg {
         margin-top: 2rem;
         max-width: 100px;
         height: auto;
@@ -414,19 +417,19 @@ p {
 
 @media (max-width: 468px) {
   .col1 {
-    .Blog-post {
+    .BlogPost {
       display: flex;
       flex-direction: column;
       width: 100%;
       height: auto;
 
-      .post-img {
+      .postImg {
         margin-top: 0rem;
         max-width: 100%;
         height: auto;
         align-self: flex-start;
       }
-      .post-data {
+      .postData {
         max-width: 100%;
         width: 100% !important;
       }

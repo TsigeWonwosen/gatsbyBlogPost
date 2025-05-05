@@ -1,17 +1,27 @@
 $borderRadius: 0.2rem;
 $headerColor: rgb(23, 23, 23);
 
-.single-page-container {
+.singlePageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0rem 1rem;
+  margin: 0rem auto;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  margin: 0rem auto;
   margin-top: 6rem;
   margin-bottom: 4rem;
   max-width: 1280px;
   .col1 {
-    width: 75%;
+    width: 78%;
     margin: 0 auto;
     padding: 0.5rem 1rem;
   }
 }
-.title-singlePage {
+.titleSinglePage {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -23,7 +33,7 @@ $headerColor: rgb(23, 23, 23);
   height: auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.059);
 
-  .blog-author {
+  .blogAuthorContainer {
     margin-top: 0.2rem;
     padding: 0.2rem 0.5rem;
     display: flex;
@@ -32,17 +42,17 @@ $headerColor: rgb(23, 23, 23);
     justify-content: flex-start;
     gap: 1rem;
 
-    .post-data {
+    .postData {
       width: 100% !important;
     }
 
-    .author-img {
+    .authorImg {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 0.7rem;
 
-      .profile-img {
+      .profileImg {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,7 +89,7 @@ $headerColor: rgb(23, 23, 23);
       }
     }
 
-    .date-container {
+    .dateContainer {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -92,7 +102,7 @@ $headerColor: rgb(23, 23, 23);
       .date {
         font-weight: 600;
       }
-      .read-time {
+      .readTime {
         font-weight: 600;
       }
     }
@@ -107,16 +117,17 @@ $headerColor: rgb(23, 23, 23);
   }
 }
 
-.single-post-container {
-  width: 100%;
+.singlePostContainer {
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin: 0 auto;
   gap: 2rem;
 
-  .single-post-img {
+  .singlePostImg {
     border-radius: $borderRadius;
     flex-direction: column;
     display: flex;
@@ -129,7 +140,7 @@ $headerColor: rgb(23, 23, 23);
     max-height: 350px;
     overflow: hidden;
 
-    .post-hero-img {
+    .postHeroImg {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -168,10 +179,10 @@ $headerColor: rgb(23, 23, 23);
       text-transform: capitalize;
       letter-spacing: 0.2rem;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       justify-content: start;
       text-align: start;
       line-height: 32px;
@@ -196,14 +207,19 @@ $headerColor: rgb(23, 23, 23);
   h3 {
     font-size: 1rem;
   }
-  // .single-page-container {
-  //   margin-top: 4rem;
-  //   margin-bottom: 2rem;
-  // }
+  .singlePageContainer {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    .col1 {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+  }
   .col2 {
     display: none;
   }
-  .title-singlePage {
+  .titleSinglePage {
     .blog-author {
       flex-direction: column-reverse;
       // align-items: center;

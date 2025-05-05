@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-import "../scss/blog-post.scss"
+import * as styles from "../scss/sidePost.module.scss"
 
 export default function SideBarCard({
   title,
@@ -14,20 +14,20 @@ export default function SideBarCard({
 }) {
   return (
     <Link to={`/posts${slug}`}>
-      <div className="Blog-post">
+      <div className={styles.post_card}>
         <Img
-          className="post-img"
+          className={styles.post_img}
           fluid={fluid}
           objectFit="cover"
           objectPosition="50% 50%"
           alt="computer"
         />
-        <div className="post-date">
-          <div className="post-title">
+        <div className={styles.post_date}>
+          <div className={styles.post_title}>
             <h3>{title}</h3>
             <span>{date}</span>
           </div>
-          <div className="post-buttons">
+          <div className={styles.post_description}>
             <div>{body && <p>{body}</p>}</div>
           </div>
         </div>

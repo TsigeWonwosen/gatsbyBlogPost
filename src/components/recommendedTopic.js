@@ -1,12 +1,13 @@
 import React from "react"
+import * as styles from "../scss/blogPost.module.scss"
 
 function RecommendedTopic() {
   return (
     <div>
       <h4>Recommended Topics</h4>
-      <ul className="recommended-topics">
+      <ul className={styles.recommendedTopics}>
         {topics.map((topic, index) => (
-          <li key={index} className="topic-item">
+          <li key={index} className={styles.topicItem}>
             {topic}
           </li>
         ))}

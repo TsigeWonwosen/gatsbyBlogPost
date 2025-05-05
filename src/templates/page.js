@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import SideBar from "../components/sideBar"
-import "../scss/singlePage.scss"
+import * as styles from "../scss/singlePage.module.scss"
 
 import Img from "gatsby-image"
 import PostInfo from "../components/postInfo"
@@ -24,45 +24,45 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout>
       <Seo title={title} />
-      <div className="row single-page-container">
+      <div className={styles.singlePageContainer}>
         <div className="col1">
-          <div className="title-singlePage">
+          <div className={styles.titleSinglePage}>
             <h3>{title}</h3>
-            <div className="blog-author">
-              <div className="author-img">
-                <span className="profile-img">{author.charAt(0)}</span>
-                <span className="author">{author}</span>
-                <button className="follow">Follow</button>
+            <div className={styles.blogAuthorContainer}>
+              <div className={styles.authorImg}>
+                <span className={styles.profileImg}>{author.charAt(0)}</span>
+                <span className={styles.author}>{author}</span>
+                <button className={styles.follow}>Follow</button>
               </div>
-              <div className="date-container">
-                <span className="read-time">10 mins read.</span>
-                <span className="date">{date}</span>
+              <div className={styles.dateContainer}>
+                <span className={styles.readTime}>10 mins read.</span>
+                <span className={styles.date}>{date}</span>
               </div>
             </div>
             <PostInfo date={date} />
           </div>
-          <section className="single-post-container">
-            <div className="single-post-img">
+          <section className={styles.singlePostContainer}>
+            <div className={styles.singlePostImg}>
               <Img
                 fluid={fluid}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt="computer"
-                className={"post-hero-img"}
+                className={styles.postHeroImg}
               />
               <p>Image from google.</p>
             </div>
             <div
-              className="blogContainer"
+              className={styles.blogContainer}
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </section>
         </div>
-        <div className="col2">
-          <div className="popular-blog">
+        <div className={styles.col2}>
+          <div className={styles.popularBlog}>
             <SideBar />
           </div>
-          <div className="advert">
+          <div className={styles.advert}>
             <h4>Advertisement </h4>
           </div>
         </div>

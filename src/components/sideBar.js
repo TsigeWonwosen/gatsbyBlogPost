@@ -1,17 +1,18 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import "../scss/side-post.scss"
+import * as styles from "../scss/sidePost.module.scss"
+
 import SideBarCard from "./sideBarCard"
 const SideBar = () => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(sideBarQuery)
   return (
-    <div className="side-bar">
+    <div className={styles.side_bar}>
       <h4>Recent Blogs</h4>
 
-      <ul className="side-bar-list">
+      <ul className={styles.side_bar_list}>
         {edges.map(
           ({
             node: {
@@ -50,7 +51,7 @@ export const sideBarQuery = graphql`
   query SideQuery {
     allMarkdownRemark(
       filter: { frontmatter: { published: { eq: true } } }
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { frontmatter: { date: DESC } }
       limit: 2
     ) {
       edges {

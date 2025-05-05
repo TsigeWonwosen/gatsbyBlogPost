@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SideBar from "../components/sideBar"
+import SideBar from "../components/sideBar.js"
 import Seo from "../components/seo"
 import Post from "../components/post.js"
 import Hero from "../components/hero/hero.js"
@@ -13,7 +13,7 @@ import "../scss/social-link.scss"
 
 import { AnimatePresence } from "framer-motion"
 
-import "./../scss/blog-post.scss"
+import * as styles from "./../scss/blogPost.module.scss"
 import RecommendedTopic from "../components/recommendedTopic.js"
 import FollowSuggestions from "../components/FollowSuggestions.js"
 const IndexPage = ({ data }) => {
@@ -29,14 +29,14 @@ const IndexPage = ({ data }) => {
     <Layout style={{ minHeight: "100vh", width: "100vw" }}>
       <Seo title="Home" />
       <Hero />
-      <section className="container">
-        <div id="home" className="home-title-1">
+      <section className={styles.container}>
+        <div id="home" className={styles.homeTitle1}>
           <h2>Home</h2>
           <div className="underline"></div>
         </div>
-        <div className="row">
-          <div className="col1">
-            <ul className="blog-post-container">
+        <div className={styles.row}>
+          <div className={styles.col1}>
+            <ul className={styles.blogPostContainer}>
               {allMarkdownRemark.edges.map(
                 ({
                   node: {
@@ -67,14 +67,14 @@ const IndexPage = ({ data }) => {
               )}
             </ul>
           </div>
-          <div className="col2">
-            <div className="popular-blog">
+          <div className={styles.col2}>
+            <div className={styles.popularBlog}>
               <SideBar />
             </div>
-            <div className="advert">
+            <div className={styles.advert}>
               <RecommendedTopic />
             </div>
-            <div className="follow-suggestions-container">
+            <div className={styles.followSuggestionsContainer}>
               <FollowSuggestions />
             </div>
           </div>
@@ -86,7 +86,7 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query FirstQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id

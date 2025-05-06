@@ -328,19 +328,20 @@ $headerColor: rgb(23, 23, 23);
   pre,
   code {
     font-family: "Courier New", monospace;
-    background-color: #eaf1f4;
     border-radius: 4px;
     padding: 0.2em 0.4em;
-    color: #333;
+    color: #c4c4cc;
   }
 
   pre {
     width: 100%;
     max-width: 100%;
-    padding: 1rem;
+    padding: 1.3rem 1.5rem;
     margin: 1rem 0;
     overflow-x: auto;
-    border-left: 2px solid #4285f4;
+    border-radius: 10px;
+    border-left: 4px solid #4285f4;
+    background-color: #1a1a26fa;
   }
 }
 

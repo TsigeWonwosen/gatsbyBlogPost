@@ -49,6 +49,14 @@ $headerColor: rgb(23, 23, 23);
       text-decoration: none;
       cursor: pointer;
     }
+    .popularBlog {
+      width: 100%;
+      height: auto;
+      border-radius: $borderRadius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 .titleSinglePage {
@@ -225,9 +233,9 @@ $headerColor: rgb(23, 23, 23);
       color: #242424;
       height: auto;
       text-transform: capitalize;
-      letter-spacing: 0.1rem;
+      letter-spacing: 1px;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 2rem 0rem 1.5rem;
+      margin: 2rem 0rem 1rem;
     }
     h6 {
       font-size: 1rem;
@@ -284,6 +292,7 @@ $headerColor: rgb(23, 23, 23);
         height: 5px;
         position: absolute;
         left: 0;
+        top: 0;
         color: #39acd5; /* Bullet color */
         font-weight: bold;
         font-size: 24px;
@@ -341,18 +350,42 @@ $headerColor: rgb(23, 23, 23);
     overflow-x: auto;
     border-radius: 10px;
     border-left: 4px solid #4285f4;
-    background-color: #1a1a26fa;
+    background-color: #2e2c2c;
+  }
+
+  blockquote {
+    border-left: 4px solid #4285f4;
+    background: #f8f9fa;
+    padding: 1em;
+    margin: 1em 0;
+    font-style: italic;
+    color: #555;
+  }
+  blockquote p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  blockquote cite {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 0.9rem;
+    color: #999;
   }
 }
 
 @media (max-width: 900px) {
   h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .singlePageContainer {
-    margin-top: 6rem;
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 0rem;
+    max-width: 1280px;
     width: 100%;
+    gap: 1rem;
     .col1 {
       margin: 0 auto;
       width: 100%;
@@ -361,12 +394,34 @@ $headerColor: rgb(23, 23, 23);
         width: 100%;
       }
       .blogContainer {
-        padding: 0.5rem;
+        padding: 0.2rem;
         width: 100%;
+        h6 {
+          font-size: 0.7rem;
+        }
+        h5 {
+          font-size: 1rem;
+        }
+        h4 {
+          font-size: 1.2rem;
+        }
+        h3 {
+          font-size: 1.4rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+        }
+        h1 {
+          font-size: 2rem;
+        }
       }
     }
     .col2 {
       display: none;
+    }
+    blockquote {
+      padding: 0.8em;
+      font-size: 0.9em;
     }
   }
   .titleSinglePage {

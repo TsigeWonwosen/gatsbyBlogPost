@@ -9,14 +9,29 @@ const About = () => (
   <Layout>
     <Seo title="About" />
     <div className="main-container">
-      <h1>About Page!</h1>
+      <h1>Where Tech Meets Clarity</h1>
       <div className="underline"></div>
       <p>
-        Welcome to About page Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Ullam vel debitis est tenetur excepturi nemo nihil doloribus
-        fugiat, earum exercitationem quo recusandae consectetur hic! Aspernatur
-        ex sequi praesentium facere provident.
+        Wonde is a technology blog dedicated to demystifying the digital world.
+        We break down complex topics—from AI to cybersecurity—into actionable
+        insights for developers, entrepreneurs, and curious minds. Our mission
+        is to deliver accurate, jargon-free content that empowers readers to
+        stay ahead in tech.
       </p>
+      <h3>What We Cover:</h3>
+      <ul>
+        <li>AI & Machine Learning </li>
+        <li> Web Development</li>
+        <li>Cybersecurity </li>
+        <li>Emerging Tech </li>
+      </ul>
+      <h3>Our Values:</h3>
+      <ul>
+        <li>Clarity over complexity </li>
+        <li> Depth over clickbait</li>
+        <li>Cybersecurity </li>
+        <li>Community-driven insights </li>
+      </ul>
     </div>
   </Layout>
 )

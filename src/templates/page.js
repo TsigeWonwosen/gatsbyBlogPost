@@ -50,6 +50,7 @@ const PageTemplate = ({ data }) => {
                 alt="computer"
                 className={styles.postHeroImg}
               />
+
               <p>Image from google.</p>
             </div>
             <div

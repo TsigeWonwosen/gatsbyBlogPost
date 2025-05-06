@@ -1,30 +1,95 @@
 .main-container {
-  height: calc(100vh - 50px);
-
-  padding: 1.3rem;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: calc(100vh - 100px);
   width: 100%;
+  height: auto;
+  padding: 1.3rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 420px;
-  border-radius: 20px 2px 15px 2px;
   background-color: #faf9fbde;
-  box-shadow: -1px 3px 10px rgba(34, 34, 34, 0.1);
+  margin-top: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  h1,
+  h3 {
+    height: auto;
+    font-weight: 600;
+    color: #454242;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
   p {
-    width: 56%;
+    width: 70%;
     margin: 0 auto;
+    margin-bottom: 1rem;
     font-size: 1.1rem;
     line-height: 1.5rem;
+    color: #454242;
+    font-weight: 400;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  ul {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #454242;
+    font-weight: 400;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    li {
+      margin-bottom: 0.5rem;
+      list-style-type: disc;
+      padding-left: 1rem;
+      text-align: start;
+    }
   }
 }
 @media (max-width: 900px) {
   .main-container {
     width: 90%;
-    margin: 1rem auto;
-    margin-bottom: 2rem;
-    margin-top: 6rem;
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    width: 97%;
+    padding: 1rem auto;
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  p {
+    width: 95%;
+  }
+  ul {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
   }
 }

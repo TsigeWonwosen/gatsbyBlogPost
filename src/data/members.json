@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Alex Rivera",
+    "role": "Founder & Lead Writer",
+    "bio": "Ex-Google engineer turned tech storyteller. Loves Python and espresso.",
+    "avatar": "../images/alex.jpg",
+    "social": {
+      "twitter": "#",
+      "github": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Sam Lee",
+    "role": "Cybersecurity Editor",
+    "bio": "White-hat hacker who simplifies security for everyday users.",
+    "avatar": "../images/sam.jpg",
+    "social": {
+      "twitter": "#",
+      "github": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Jordan Taylor",
+    "role": "AI/ML Contributor",
+    "bio": "Researcher making neural networks accessible to all.",
+    "avatar": "../images/jordan.jpg",
+    "social": {
+      " twitter": "#",
+      "github": "#",
+      "linkedin": "#"
+    }
+  }
+]

@@ -1,21 +1,23 @@
 .main-container {
   min-height: calc(100vh - 100px);
   width: 100%;
+  max-width: 1000px;
   height: auto;
-  padding: 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #faf9fbde;
-  margin-top: 5rem;
-  padding-top: 3rem;
+  margin-top: 8rem;
+  margin: auto;
+  padding: 1.5rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
   h1,
   h3 {
     height: auto;
+
     font-weight: 600;
-    color: #454242;
+    color: rgb(84, 76, 76);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 1rem;
   }
@@ -30,7 +32,8 @@
     text-align: center;
   }
   p {
-    width: 70%;
+    width: 100%;
+    text-align: center;
     margin: 0 auto;
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -40,12 +43,12 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   ul {
-    width: 60%;
+    width: auto;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 1.1rem;
     line-height: 1.5rem;
-    color: #454242;
+    color: #000000;
     font-weight: 400;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     li {

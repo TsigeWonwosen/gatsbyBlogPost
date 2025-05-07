@@ -8,28 +8,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #faf9fbde;
-  margin-top: 5rem;
-  padding-top: 3rem;
+  margin-top: 4rem;
   padding-bottom: 2rem;
 }
-h2 {
-  height: auto;
-  font-weight: 600;
-  color: #454242;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 2rem;
-}
+
 .team-section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  background: #f8f9fa;
 
   .team-title {
-    font-size: 2.5rem;
-    color: #2c3e50;
+    font-size: 2.2rem;
+    color: #23282e;
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
@@ -38,94 +29,131 @@ h2 {
     &::after {
       content: "";
       position: absolute;
-      bottom: -10px;
+      bottom: -15px;
       left: 50%;
       transform: translateX(-50%);
       width: 80px;
-      height: 3px;
+      height: 4px;
       background: #4285f4;
     }
   }
 
   .team-subtitle {
+    text-align: center;
     color: #7f8c8d;
-    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
     font-size: 1.1rem;
   }
 
+  // grid.module.scss
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem;
+    justify-content: center; // Centers grid items
+
+    // Mobile (1 column) - default
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+
+    // Tablet (2 columns) - 768px+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    }
+
+    // Desktop (3 columns) - 1024px+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, minmax(250px, 300px));
+    }
+  }
+
+  .gridItem {
+    max-width: 300px; // Hard max constraint
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   }
 
   .team-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.897);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-    }
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
 
     .card-image {
-      position: relative;
-      height: 250px;
+      flex-direction: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+
+      width: 100px;
       overflow: hidden;
 
       img {
         width: 100%;
         height: 100%;
+        border: 3px solid rgba(61, 188, 208, 0.884);
+        border-radius: 50%;
         object-fit: cover;
+        object-position: center;
         transition: transform 0.5s ease;
       }
 
       &:hover img {
-        transform: scale(1.05);
-      }
-
-      .social-links {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-
-        a {
-          color: white;
-          background: rgba(0, 0, 0, 0.7);
-          width: 36px;
-          height: 36px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background 0.3s ease;
-
-          svg {
-            font-size: 1rem;
-          }
-
-          &:hover {
-            background: #4285f4;
-          }
-        }
-      }
-
-      &:hover .social-links {
-        opacity: 1;
+        transform: scale(1.02);
       }
     }
 
+    .social-links {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      gap: 1rem;
+      transition: opacity 0.3s ease;
+      margin-top: auto;
+
+      a {
+        color: white;
+        background: #4b6ea7;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background: #4285f4;
+        }
+      }
+    }
+
+    &:hover .social-links {
+      opacity: 1;
+    }
+
     .card-content {
-      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
       text-align: center;
 
       h3 {
@@ -138,25 +166,26 @@ h2 {
         font-weight: 600;
         margin-bottom: 1rem;
         font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
       }
 
       .bio {
-        color: #7f8c8d;
+        width: 100%;
+        color: #687071;
         line-height: 1.6;
         font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
       }
     }
-  }
-
-  @media (max-width: 768px) {
-    padding: 3rem 1rem;
-
-    .team-title {
-      font-size: 2rem;
-    }
-
-    .team-grid {
-      grid-template-columns: 1fr;
+    .card-body {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      gap: 1;
     }
   }
 }

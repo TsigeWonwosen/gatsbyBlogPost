@@ -12,11 +12,11 @@ const About = () => (
       <h1>Where Tech Meets Clarity</h1>
       <div className="underline"></div>
       <p>
-        Wonde is a technology blog dedicated to demystifying the digital world.
-        We break down complex topics—from AI to cybersecurity—into actionable
-        insights for developers, entrepreneurs, and curious minds. Our mission
-        is to deliver accurate, jargon-free content that empowers readers to
-        stay ahead in tech.
+        <b>The Ethiopian</b> is a technology blog dedicated to demystifying the
+        digital world. We break down complex topics—from AI to
+        cybersecurity—into actionable insights for developers, entrepreneurs,
+        and curious minds. Our mission is to deliver accurate, jargon-free
+        content that empowers readers to stay ahead in tech.
       </p>
       <h3>What We Cover:</h3>
       <ul>

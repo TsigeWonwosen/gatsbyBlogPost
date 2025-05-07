@@ -6,6 +6,7 @@ import { FaBars } from "react-icons/fa"
 import { CgClose } from "react-icons/cg"
 
 import "../scss/navbar.scss"
+import Logo from "./logo"
 const Header = ({ handleChange, open }) => {
   const [dropdown, setDropdown] = useState(false)
 
@@ -39,9 +40,7 @@ const Header = ({ handleChange, open }) => {
   return (
     <header className={headerStyle}>
       <div className="header">
-        <Link to="/">
-          <div className="logo">The Ethiopian</div>
-        </Link>
+        <Logo />
 
         <div className="navBar">
           <Link

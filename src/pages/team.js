@@ -36,7 +36,9 @@ const Teams = () => {
       <Seo title="Teams" />
       <div className="main-container">
         <section className="team-section">
-          <h2 className="team-title">The Minds Behind Wonde</h2>
+          <h2 className="team-title">
+            The Minds Behind <b>The Ethiopian</b>
+          </h2>
           <p className="team-subtitle">
             Meet the experts driving our tech insights
           </p>
@@ -48,6 +50,13 @@ const Teams = () => {
                 <div key={member.id} className="team-card">
                   <div className="card-image">
                     <GatsbyImage image={image} alt={member.name} />
+                  </div>
+                  <div className="card-content">
+                    <div className="card-body">
+                      <h3>{member.name}</h3>
+                      <p className="role">{member.role}</p>
+                      <p className="bio">{member.bio}</p>
+                    </div>
                     <div className="social-links">
                       {member.social.twitter && (
                         <a href={member.social.twitter} aria-label="Twitter">
@@ -65,11 +74,6 @@ const Teams = () => {
                         </a>
                       )}
                     </div>
-                  </div>
-                  <div className="card-content">
-                    <h3>{member.name}</h3>
-                    <p className="role">{member.role}</p>
-                    <p className="bio">{member.bio}</p>
                   </div>
                 </div>
               )

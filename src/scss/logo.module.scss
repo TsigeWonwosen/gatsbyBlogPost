@@ -1,0 +1,46 @@
+.coffeeLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.monogram {
+  font-family: "Noto Sans Ethiopic", sans-serif;
+  font-size: 2.5rem;
+  color: #6f4e37; // Coffee brown
+  line-height: 1;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+
+  .primary {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: #0db9e9;
+  }
+
+  .secondary {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #c5caca; // Ethiopian red
+  }
+}
+
+@media (max-width: 768px) {
+  .logoText {
+    .primary {
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .secondary {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+}

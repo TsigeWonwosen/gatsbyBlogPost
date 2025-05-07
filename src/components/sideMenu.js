@@ -7,7 +7,7 @@ function sideMenu({ active, handleChange }) {
     <div className={`side-menu ${active ? "active" : ""}`}>
       <div className="sideBar-logo">
         <Link to="/">
-          <span>Wonde</span>
+          <span>The Ethiopian</span>
         </Link>
         <div className="social-link-container">
           <SocialLink />
@@ -44,7 +44,7 @@ export default sideMenu
 
 const navLists = [
   { url: "/", name: "Home" },
-  { url: "/about", name: "About" },
   { url: "/team", name: "Teams" },
-  { url: "/task", name: "Tags" },
+  { url: "/about", name: "About" },
+  { url: "/contact", name: "contact" },
 ]

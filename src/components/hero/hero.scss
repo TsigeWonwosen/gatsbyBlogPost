@@ -3,7 +3,7 @@
 .hero {
   width: 100%;
   height: 100vh;
-  max-height: 500px;
+  max-height: 550px;
   position: relative;
   object-fit: cover;
   overflow-x: hidden;
@@ -19,14 +19,14 @@
     margin: 0rem auto;
     padding: 0 1rem;
     max-width: 1280px;
-    max-height: 500px;
+    max-height: 550px;
     z-index: 20;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
     h1 {
-      color: #f4ededee;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+      color: #f4ededf9;
       font-weight: 800;
       margin-top: clamp(0.5rem, 0.8rem, 0.7rem);
       margin-bottom: clamp(0.7rem, 1rem, 1.1rem);
@@ -38,8 +38,10 @@
     }
     p {
       max-width: 55%;
-      color: rgb(213, 209, 209);
+      color: rgb(234, 228, 228);
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+      font-size: 1.1rem;
+      font-weight: 400;
     }
     .contact-btn {
       background: var(--clr-primary-5);
@@ -77,10 +79,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  max-height: 500px;
+  max-height: 550px;
   object-position: bottom center;
   object-fit: cover;
-  opacity: 0.8;
   overflow-x: hidden;
   transform: 0.6s ease-in-out;
 }
@@ -89,14 +90,14 @@
   content: " ";
   width: 100%;
   height: 100vh;
-  max-height: 500px;
+  max-height: 550px;
   position: absolute;
   top: 0;
   left: 0;
   background: linear-gradient(
     to right,
-    rgba(3, 10, 22, 0.89),
-    rgba(52, 52, 163, 0.137)
+    rgba(3, 10, 22, 0.981),
+    rgba(32, 32, 195, 0.022)
   );
 }
 

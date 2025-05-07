@@ -2,23 +2,26 @@
 @use '../scss/base' as vars;
 
 .header-container {
-  margin-top: -1px;
-  display: inline-block;
-  text-align: center;
   position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translate(-50%, -62%);
-
-  height: 80px;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  height: 75px;
   width: 100vw;
-
+  background: linear-gradient(
+    to left,
+    rgba(2, 5, 81, 0.025),
+    rgba(64, 10, 213, 0.056)
+  );
   z-index: 1000;
   .header {
     max-width: 1280px;
-    padding: 0 1.3rem;
     margin: 0 auto;
     height: 100%;
+    width: 100%;
     display: flex;
     text-align: center;
     align-items: center;
@@ -26,30 +29,24 @@
   }
 }
 .header-container2 {
-  margin: 0;
-  margin-top: -1px;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  display: inline-block;
-  text-align: center;
   position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translate(-50%, -62%);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     to left,
     rgba(5, 6, 56, 0.863),
     rgba(19, 5, 85, 0.836)
   );
-  height: 80px;
+  height: 75px;
   width: 100vw;
   z-index: 1000;
   .header {
-    padding: 0 1.5rem;
     margin: 0 auto;
     max-width: 1280px;
+    width: 100%;
     height: 100%;
     display: flex;
     text-align: center;
@@ -62,43 +59,16 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 103px;
+  width: auto;
   height: 100%;
   padding: 0.3rem 0.4rem;
-  margin: auto;
-  color: color.adjust(vars.$color, $lightness: 4%);
-  border-top: 1px solid rgba(255, 255, 255, 0.705);
-  border-bottom: 3px solid rgba(255, 255, 255, 0.705);
-  border-right: 9px solid rgba(255, 255, 255, 0.705);
-  border-left: 0.5px solid rgba(255, 255, 255, 0.505);
-  border-radius: 15px 1px 15px 1px;
-  box-shadow: 2px 7px 25px rgba(12, 12, 12, 0.155);
-  font-size: 1rem;
-  font-family: "Lobster", cursive;
+  color: rgba(255, 255, 255, 0.803);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
   font-weight: bold;
-  transition: all 0.5sec ease-in-out;
-  &:hover {
-    color: lighten(vars.$color, 10%);
-    transform: scaleY(1.02);
-    box-shadow: 2px 15px 30px rgba(12, 12, 12, 0.255);
-  }
 }
-.logo img {
-  margin: 0;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  letter-spacing: 0.1rem;
-  position: relative;
-}
-.logo span {
-  color: vars.$btnColor;
-  font-size: 1.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .navBar {
   height: 100%;
   width: auto;
@@ -201,7 +171,6 @@
   }
 }
 .nav-burger-close {
-  z-index: 3;
   position: absolute;
   top: 50%;
   right: 1.7rem;
@@ -212,7 +181,6 @@
     display: grid;
     place-items: center;
     background-color: transparent;
-    // color: vars.$btnColor;
     color: rgba(218, 211, 211, 0.878);
     border: none;
     font-size: 24px;
@@ -245,11 +213,13 @@
 @media (max-width: 900px) {
   .nav-burger-close {
     display: flex;
+    z-index: 3000;
     button {
       transition: all 0.5s ease-in-out;
     }
   }
   .header-container {
+    padding: 0rem 1rem;
     background: transparent;
     .header {
       border-bottom: 0.4px solid rgba(255, 255, 255, 0.1);
@@ -257,7 +227,7 @@
   }
 
   .logo {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .navBar {
     display: none;

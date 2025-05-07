@@ -3,10 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap");
 
 $primary-color: rgb(92, 85, 85);
-body {
-  color: $primary-color; // Variables now need namespace
-}
-
 $color: #f3f3f3f6 !default;
 $btnColor: rgba(38, 184, 201, 0.856) !default;
 $btnColorHover: rgba(38, 184, 201, 0.856) !default;
@@ -19,6 +15,8 @@ $btnColorHover: rgba(38, 184, 201, 0.856) !default;
   box-sizing: border-box;
 }
 html {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 body {
@@ -29,6 +27,7 @@ body {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  position: relative;
   a:hover,
   a:visited,
   a:link,
@@ -43,7 +42,6 @@ body {
     letter-spacing: 1px;
     font-weight: 600;
     text-transform: capitalize;
-    padding: 0;
     font-family: "Abril Fatface", serif;
   }
   p {

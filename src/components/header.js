@@ -1,12 +1,11 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import Dropdown from "./dropDown/Dropdown"
-import "../scss/navbar.scss"
-
 import { IoIosArrowDropdown } from "react-icons/io"
 import { FaBars } from "react-icons/fa"
 import { CgClose } from "react-icons/cg"
 
+import "../scss/navbar.scss"
 const Header = ({ handleChange, open }) => {
   const [dropdown, setDropdown] = useState(false)
 
@@ -41,11 +40,7 @@ const Header = ({ handleChange, open }) => {
     <header className={headerStyle}>
       <div className="header">
         <Link to="/">
-          <div className="logo">
-            <span>{"{"}</span>
-            Wonde
-            <span>{"}"}</span>
-          </div>
+          <div className="logo">The Ethiopian</div>
         </Link>
 
         <div className="navBar">
@@ -56,20 +51,7 @@ const Header = ({ handleChange, open }) => {
           >
             Home
           </Link>
-          <Link
-            to="/about"
-            className="nav-link fromRight"
-            activeClassName="active-link"
-          >
-            About
-          </Link>
-          <Link
-            to="/task"
-            activeClassName="active-link "
-            className="nav-link fromRight"
-          >
-            Tags
-          </Link>
+
           <Link
             to="/team"
             className="nav-link fromRight"
@@ -89,6 +71,13 @@ const Header = ({ handleChange, open }) => {
               <IoIosArrowDropdown />{" "}
             </span>
             {dropdown && <Dropdown />}
+          </Link>
+          <Link
+            to="/about"
+            className="nav-link fromRight"
+            activeClassName="active-link"
+          >
+            About
           </Link>
           <Link
             to="/contact"

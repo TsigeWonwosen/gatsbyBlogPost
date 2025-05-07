@@ -43,13 +43,17 @@ const PageTemplate = ({ data }) => {
           </div>
           <section className={styles.singlePostContainer}>
             <div className={styles.singlePostImg}>
-              <Img
-                fluid={fluid}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt="computer"
-                className={styles.postHeroImg}
-              />
+              <div className={styles.postHeroImgContainer}>
+                <Img
+                  fluid={fluid}
+                  alt="computer"
+                  className={styles.heroImage}
+                  imgStyle={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              </div>
 
               <p>Image from google.</p>
             </div>
@@ -83,7 +87,7 @@ export const pageQuery = graphql`
         author
         image {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1200, maxHeight: 400, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }

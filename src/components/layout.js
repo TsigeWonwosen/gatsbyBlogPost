@@ -34,15 +34,14 @@ const Layout = ({ children }) => {
         width: "100vw",
         margin: "auto",
         overflowX: "hidden",
+        position: "relative",
       }}
     >
-      <div>
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          handleChange={handleChange}
-          open={open}
-        />
-      </div>
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        handleChange={handleChange}
+        open={open}
+      />
 
       <main style={{ width: "100%" }}>{children}</main>
       <SideMenu active={open} handleChange={handleChange} />

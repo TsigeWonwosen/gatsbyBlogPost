@@ -22,7 +22,7 @@
 }
 .team-title {
   font-size: 2.2rem;
-  color: #23282e;
+  color: #35383c;
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
@@ -40,12 +40,13 @@
   }
 }
 
-.team-subtitle {
+.teamSubtitle {
   text-align: center;
-  color: #7f8c8d;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
   font-size: 1.1rem;
+  color: #010101b8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 // grid.module.scss
@@ -94,7 +95,7 @@
     height: 80px;
     width: 80px;
     box-shadow: 4px 1px 24px rgba(0, 0, 0, 0.05);
-    border: 3px solid rgba(228, 240, 242, 0.884);
+    border: 3px solid #2162a8;
     overflow: hidden;
 
     img {
@@ -161,7 +162,7 @@
     }
 
     .role {
-      color: #4285f4;
+      color: #0e4f94;
       font-weight: 600;
       margin-bottom: 1rem;
       font-size: 0.9rem;
@@ -171,11 +172,13 @@
 
     .bio {
       width: 100%;
-      color: #687071;
+      color: #2d3131;
       line-height: 1.6;
       font-size: 0.95rem;
       width: 100%;
       text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 2rem;
     }
   }
   .card-body {
@@ -190,7 +193,7 @@
 @media (max-width: 768px) {
   .mainContainer {
     padding: 0.5rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
     padding-bottom: 1rem;
   }
   .team-section {
@@ -206,8 +209,5 @@
   }
   .team-grid {
     gap: 5rem;
-  }
-  .team-card {
-    // background: yellowgreen;
   }
 }

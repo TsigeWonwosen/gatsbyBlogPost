@@ -39,7 +39,7 @@ const Teams = () => {
           <h2 className="team-title">
             The Minds Behind <b>The Ethiopian</b>
           </h2>
-          <p className="team-subtitle">
+          <p className="teamSubtitle">
             Meet the experts driving our tech insights
           </p>
 

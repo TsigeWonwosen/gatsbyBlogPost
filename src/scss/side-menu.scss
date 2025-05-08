@@ -12,7 +12,7 @@
   max-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: rgb(7, 29, 110);
+  background-color: rgb(20, 42, 120);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -20,47 +20,50 @@
   transition: all 0.5s ease-in-out;
   z-index: 40;
   .sideBar-logo {
-    box-sizing: border-box;
     width: 50%;
     height: 100%;
-    margin-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    background-color: rgba(9, 38, 100, 0.925);
-    color: whitesmoke;
-    clip-path: polygon(0 0, 100% 40%, 100% calc(100% - 40%), 0 100%);
+    align-items: start;
+    padding-left: 2rem;
+    background-color: rgba(9, 38, 100, 0.958);
+    clip-path: polygon(0 10%, 100% 35%, 100% calc(100% - 35%), 0 100%);
+    box-shadow: 1px 1px 40px rgba(226, 222, 222, 0.195);
     a {
-      color: #19a0bbe0;
-      font-size: 24px;
+      color: #b6dce3e0;
+      font-size: 20px;
       font-weight: bold;
     }
 
     .social-link-container {
       width: 90%;
-      margin-top: 3rem;
+      margin-top: 2rem;
       .social-links {
-        width: 100%;
+        width: 90%;
         margin-left: 0;
-        margin: 0 auto;
+        margin-top: 0;
+        justify-content: left;
+        padding: 0rem !important;
+        gap: 0.3rem !important;
+        transition: hover 0.3s ease-in-out;
+        & :hover {
+          color: #47d9ecef !important;
+        }
       }
     }
   }
   .sideBar-nav-links {
     z-index: 41;
     width: 50%;
-    height: 50%;
+    height: auto;
     margin: auto 2rem;
     display: flex;
     gap: 0.5rem;
-    color: yellow;
     flex-direction: column;
 
     li {
-      border: 0.5px solid rgba(9, 125, 145, 0.575);
+      border: 0.5px solid rgba(11, 133, 155, 0.799);
       width: 90%;
       height: 3rem;
       margin: 0 auto;

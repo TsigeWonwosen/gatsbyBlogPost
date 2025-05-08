@@ -34,7 +34,7 @@ const Teams = () => {
   return (
     <Layout>
       <Seo title="Teams" />
-      <div className="main-container">
+      <div className="mainContainer">
         <section className="team-section">
           <h2 className="team-title">
             The Minds Behind <b>The Ethiopian</b>
